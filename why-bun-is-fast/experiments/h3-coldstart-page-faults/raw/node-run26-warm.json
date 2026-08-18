@@ -1,0 +1,20 @@
+{
+  "run_id": "node-run26",
+  "runtime": "node",
+  "state": "warm",
+  "timestamp_unix": 1786969042.9516764,
+  "command": [
+    "node",
+    "experiments/h3-coldstart-page-faults/benchmark/hello.js"
+  ],
+  "status": "OK",
+  "page_faults": 2476.0,
+  "minor_faults": 2476.0,
+  "major_faults": 0.0,
+  "elapsed_s": 0.038812661,
+  "user_s": 0.023446,
+  "sys_s": 0.01563,
+  "wall_clock_python_s": 0.044553279876708984,
+  "stdout": "hello",
+  "returncode": 0
+}

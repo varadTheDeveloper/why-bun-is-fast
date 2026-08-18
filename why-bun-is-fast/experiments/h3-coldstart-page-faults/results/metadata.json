@@ -1,0 +1,80 @@
+{
+  "experiment_id": "h3-coldstart-page-faults",
+  "experiment_name": "H3 - Cold-Start Page-Fault Optimization",
+  "hypothesis_id": "H3",
+  "run_batch_id": "h3-run-2026-08-17",
+  "timestamp_utc_start": "2026-08-17T12:10:00Z",
+  "timestamp_utc_end": "2026-08-17T12:16:00Z",
+
+  "machine": {
+    "anonymized_machine_id": "shared-cloud-sandbox-vm",
+    "dedicated_or_shared": "SHARED — same cloud sandbox used for H4/H5/H6, not dedicated benchmarking hardware. Classified as LIMITED/PILOT for this reason, per Stage 13 instruction.",
+    "container_vm_or_native": "VM (KVM/Firecracker guest — kernel string contains 'fc', a custom Firecracker-patched build)",
+    "load_average_at_run_start": "0.25, 0.19, 0.08 (1/5/15 min) — low"
+  },
+
+  "hardware": {
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "cpu_cores_physical": 2,
+    "cpu_cores_logical": 2,
+    "ram_total_gb": 7.8,
+    "architecture": "x86_64"
+  },
+
+  "os": {
+    "name": "Ubuntu",
+    "version": "24.04.4 LTS (Noble Numbat)",
+    "kernel": "6.18.5-fc-v20",
+    "filesystem": "ext4 (assumed, not independently re-verified this run)"
+  },
+
+  "runtime": {
+    "bun_version": "1.3.13 (release, pre-installed)",
+    "bun_binary_path": "bun",
+    "node_version": "v22.22.2 (release, pre-installed)",
+    "node_binary_path": "node",
+    "deno_version": "2.9.5 stable (release), V8 15.0.245.2-rusty",
+    "deno_binary_path": "deno",
+    "build_track": "ALL THREE runtimes benchmarked as release builds. Source-controlled builds were NOT attempted for H3 (the H5 experiment already established that this sandbox cannot install Bun's pinned Rust nightly toolchain due to a verified static.rust-lang.org network failure; that blocker applies equally here and was not re-litigated). This is a disclosed deviation from the Stage 12 'if source-controlled builds are feasible, record separately' instruction — none were feasible, so all three runtimes are on the same track (release), which at least avoids mixing source-controlled and release builds under one comparison."
+  },
+
+  "cache_control": {
+    "method": "sync; echo 3 > /proc/sys/vm/drop_caches",
+    "verified": true,
+    "verification_method": "Directly tested before the main run: wrote a 100MB test file, read it into page cache (confirmed via /proc/meminfo Cached increase), then dropped caches and confirmed Cached returned to baseline. Additionally, every single cold run in the main dataset independently recorded /proc/meminfo Cached immediately before and after its own drop_caches write, and the observed drop (100k+ KB per run, see results) is preserved per-run in raw data, not just checked once upfront.",
+    "capability_check": "Running as root (uid=0) with cap_sys_admin present in the capability bounding set (via capsh --print).",
+    "note_on_read_permission": "`cat /proc/sys/vm/drop_caches` returns 'Permission denied' in this sandbox (the sysctl is write-only/unreadable here), but the WRITE succeeds and produces a verified, measurable page-cache drop every time — confirmed both in the standalone prerequisite check and per-run throughout the full 90-cold-run dataset."
+  },
+
+  "perf_tool": {
+    "requested": "perf stat -e page-faults,minor-faults,major-faults (Stage 12 preferred method)",
+    "deviation": "The running kernel (6.18.5-fc-v20) is a custom Firecracker-patched build with no matching `linux-tools` package in Ubuntu's apt repos — `apt-get install linux-tools-generic` 404s (the kernel-specific meta-package `linux-tools-6.18.5-fc-v20` does not exist upstream). Installed the closest available Ubuntu build instead (`linux-tools-6.8.0-111`, containing `perf` version 6.8.12) and invoked its versioned binary directly at `/usr/lib/linux-tools-6.8.0-111/perf`, bypassing the `/usr/bin/perf` dispatch wrapper's kernel-version guard (which otherwise refuses to run against a kernel it doesn't recognize).",
+    "cross_validation": "Before trusting this mismatched-version perf build, its page-fault counts were cross-checked against an independent method (`/usr/bin/time -v`, which reports getrusage()-based minor/major fault counts collected by the kernel at wait4() time, a different code path than perf's software-counter event subsystem). For a sample node invocation: perf reported 2447 minor/0 major faults vs time -v's 2534 minor/0 major faults (same warm-ish state, ~3.5% difference, both showing 0 major faults) — reasonably consistent, not identical (expected, since the two tools sample at slightly different points and the comparison run was not a controlled cold/warm pair). This is disclosed as the basis for trusting the version-mismatched perf build's software page-fault counters (page-fault software counters read directly from the kernel's task struct fault counters, which are a stable ABI unlikely to be affected by the specific perf userspace version)."
+  },
+
+  "environment_variables": { "non_default_vars_set": {} },
+
+  "background_workload": {
+    "description": "Shared cloud sandbox; same session-management processes present as in H4/H5/H6 (roughly constant low CPU usage). No HTTP load generator, database, or other benchmark running concurrently during H3.",
+    "other_processes_running": ["session management processes (claude CLI, environment-manager)"]
+  },
+
+  "hard_prerequisite_validation": {
+    "step_1_root_cap_sys_admin": "CONFIRMED — uid=0, cap_sys_admin present in bounding set.",
+    "step_2_cache_drop_command_succeeds": "CONFIRMED — write to /proc/sys/vm/drop_caches returns success and measurably drops /proc/meminfo Cached (tested with a 100MB file: Cached rose from 301344kB to 404012kB after reading the file, then fell back to 300648kB after the drop).",
+    "step_3_4_cold_then_warm_node_run": "CONFIRMED — cold node run: 32 major faults, ~0.078-0.085s elapsed; immediate warm re-run: 0 major faults, ~0.030-0.032s elapsed. Repeated twice for confidence, fully reproducible both times.",
+    "step_5_materially_different_behavior": "CONFIRMED — major faults 32→0 (deterministic, not noisy) and elapsed time roughly 2.5x higher cold vs warm. Prerequisite PASSED; proceeded to full 180-run protocol.",
+    "outcome": "PASSED — not classified as BLOCKED. All three runtimes were subsequently found to show this same deterministic 0-major-fault warm state and non-zero, highly reproducible cold major-fault count (see results)."
+  },
+
+  "runs": {
+    "cold_runs_per_runtime": 30,
+    "warm_runs_per_runtime": 30,
+    "pairing": "Each cold run is immediately followed (same iteration, no intervening cache drop) by one warm run of the same executable, per Section 12. This produces 30 warm runs per runtime, exceeding the declared 5-run minimum.",
+    "total_runs": 180,
+    "failed_runs": 0,
+    "cache_drop_order": "Independent per-run: cache was dropped immediately before EVERY individual cold run (never dropped once and reused across multiple runs or across runtimes). Runtimes were run in sequential blocks (all 30 Bun pairs, then all 30 Node pairs, then all 30 Deno pairs), but each block's cache preparation is per-run and identical in method across blocks — no runtime received different cache-prep treatment."
+  },
+
+  "notes": "Full raw per-run JSON preserved individually in ../raw/<runtime>-run<NN>-<cold|warm>.json (180 files), plus ../raw/run_index.json (all 180 entries) and ../raw/binary_audit.json (file/ldd/readelf output for all three binaries). Benchmark source (hello.js, orchestrate.py, analyze.py) preserved in ../benchmark/."
+}

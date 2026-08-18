@@ -1,0 +1,17 @@
+{
+  "run_id": "node-size4096-run07",
+  "runtime": "node",
+  "runtime_version": "v22.22.2",
+  "size": 4096,
+  "timed_iterations_requested": 1000000,
+  "started_at_unix": 1786968048.7679412,
+  "finished_at_unix": 1786968050.018869,
+  "wall_clock_process_s": 1.2509276866912842,
+  "status": "OK",
+  "allocsPerSec": 833312.3644165368,
+  "totalNs": 1200030196,
+  "iterations_actually_run": 1000000,
+  "acc": 248997248,
+  "peak_rss_kb": 150696,
+  "runtimeVersion_selfReported": "node v22.22.2"
+}

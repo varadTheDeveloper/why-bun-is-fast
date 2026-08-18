@@ -1,0 +1,113 @@
+{
+  "experiment_id": "h6-realistic-io-convergence",
+  "experiment_name": "H6 - Realistic-I/O HTTP Convergence",
+  "hypothesis_id": "H6",
+  "run_batch_id": "h6-run-2026-08-17",
+  "timestamp_utc_start": "2026-08-17T10:29:33Z",
+  "timestamp_utc_end": "2026-08-17T10:47:10Z",
+  "total_wall_clock_seconds": 1056.3,
+
+  "machine": {
+    "anonymized_machine_id": "shared-cloud-sandbox-vm",
+    "dedicated_or_shared": "SHARED — cloud sandbox, not a dedicated benchmarking host",
+    "container_vm_or_native": "VM (KVM guest)",
+    "virtualization_technology": "KVM",
+    "cpu_steal_time_observed": "~40 jiffies steal out of ~293,704 total jiffies at post-run snapshot (~0.01%) — negligible at time of check; not continuously monitored throughout the run"
+  },
+
+  "hardware": {
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "cpu_cores_physical": 2,
+    "cpu_cores_logical": 2,
+    "cpu_threads_per_core": 1,
+    "cpu_governor": "not exposed / not controllable in this sandbox",
+    "ram_total_gb": 7.8,
+    "gpu": "N/A"
+  },
+
+  "os": {
+    "name": "Ubuntu",
+    "version": "24.04.4 LTS (Noble Numbat)",
+    "kernel": "6.18.5-fc-v20",
+    "architecture": "x86_64",
+    "filesystem": "ext4"
+  },
+
+  "runtimes": {
+    "bun": {
+      "version_string": "1.3.13",
+      "install_method": "release (pre-installed in sandbox)",
+      "git_commit": "N/A — release build, not source-controlled build",
+      "build_config": "official release binary"
+    },
+    "node": {
+      "version_string": "v22.22.2",
+      "install_method": "release (pre-installed in sandbox)",
+      "git_commit": "N/A — release build",
+      "build_config": "official release binary"
+    },
+    "deno": {
+      "version_string": "2.9.5 (stable, release, x86_64-unknown-linux-gnu), v8 15.0.245.2-rusty, typescript 6.0.3",
+      "install_method": "release (downloaded from GitHub Releases during this session — deno.land/install.sh returned HTTP 403)",
+      "git_commit": "N/A — release build",
+      "build_config": "official release binary",
+      "commit_pin_status": "N/A for this experiment — H6 uses the release-comparison track per notes/12-experiment-design.md Section 3; the source-controlled pin gap (Stage 11 open item 27) remains open and is NOT resolved by this run"
+    }
+  },
+
+  "database_driver": {
+    "package": "pg",
+    "version": "8.13.1",
+    "note": "Deliberately used identically across Bun, Node, and Deno (Deno via npm:pg@8.13.1 specifier) instead of each runtime's own idiomatic/native client, to remove driver-implementation as a confound axis. This is a documented deviation from a strict reading of 'each runtime's native client' — see results/README.md Confounders section."
+  },
+
+  "environment_variables": {
+    "non_default_vars_set": {}
+  },
+
+  "background_workload": {
+    "description": "Shared cloud sandbox; no other user workload knowingly running concurrently, but this is a multi-tenant KVM guest and true isolation cannot be guaranteed or verified beyond the steal-time spot check above.",
+    "other_processes_running": ["postgresql (main cluster, idle except during Workload B runs)"]
+  },
+
+  "database": {
+    "engine": "PostgreSQL",
+    "version": "16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)",
+    "instance_type": "local, native apt-installed cluster (not containerized) — single instance shared by all three runtimes' Workload B servers, run sequentially never concurrently",
+    "schema_version": "benchmark/schema.sql, sha256:15703dd2bf2e10dfcf3abb5f12ccd204e00462c7eb5b84903543d6747846fe03",
+    "seed_data": "10,000 deterministic rows generated via generate_series (no random() used) — reproducible from schema.sql alone",
+    "query": "SELECT id, name, email, balance_cents FROM accounts WHERE id = $1, parameter fixed at 42 for every request, every run, every runtime",
+    "max_connections": 100,
+    "connection_pool_per_server": "pg.Pool, max: 10, idleTimeoutMillis: 30000 — identical across all three runtimes' Workload B servers"
+  },
+
+  "load_generator": {
+    "tool": "autocannon",
+    "version": "8.0.0 (running under Node v22.22.2)",
+    "machine_placement": "same machine as server and database (loopback, 127.0.0.1) — not a separate load-generation host",
+    "configuration": {
+      "connections_concurrency": 20,
+      "warmup_duration_s": 5,
+      "timed_duration_s": 10,
+      "note_on_deviation": "Stage 12 protocol specified concurrency=50, warmup=30s, timed=60s. Reduced here due to the 2-vCPU shared-sandbox constraint (concurrency) and session wall-clock constraints (durations). See results/README.md."
+    }
+  },
+
+  "cache_state": {
+    "page_cache_dropped": false,
+    "drop_method": "N/A — H6 is a steady-state throughput/latency experiment, not a cold-start experiment (that is H3's and H7's concern)",
+    "verified_via_sanity_check": null
+  },
+
+  "runs": {
+    "runs_per_combo": 10,
+    "combos": 6,
+    "total_runs": 60,
+    "failed_runs": 0,
+    "errors_across_all_runs": 0,
+    "timeouts_across_all_runs": 0,
+    "non_2xx_across_all_runs": 0
+  },
+
+  "notes": "Full raw autocannon JSON output for all 60 runs preserved individually in ../raw/<run_id>.json plus the consolidated ../raw/run_index.json. Benchmark source preserved in ../benchmark/. This metadata.json was filled from values actually observed on the execution machine during this run, not copied from a template unfilled."
+}

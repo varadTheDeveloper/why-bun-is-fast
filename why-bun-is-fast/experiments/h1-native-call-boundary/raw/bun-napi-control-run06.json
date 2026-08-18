@@ -1,0 +1,115 @@
+{
+  "run_id": "bun-napi-control-run06",
+  "status": "OK",
+  "wall_clock_process_s": 0.019414424896240234,
+  "mode": "control",
+  "iterations": 10000000,
+  "numChunks": 10,
+  "perChunk": 1000000,
+  "chunkTimingsNs": [
+    334149,
+    333366,
+    309506,
+    297573,
+    303002,
+    314290,
+    293754,
+    297443,
+    321159,
+    349235
+  ],
+  "totalNs": 3153477,
+  "nsPerCall": 0.3153477,
+  "callsPerSec": 3171102881.0421004,
+  "warmupFinalStatus": "STABLE",
+  "warmupFinalIterations": 6400000,
+  "warmupAttempts": [
+    {
+      "attempt": 0,
+      "iterations": 100000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 119551.6,
+        "lastHalfMeanNs": 23425.2,
+        "relativeChange": -0.8040578294226092,
+        "lastHalfCV": 0.12263410522613019
+      },
+      "attemptMeanPerCallNs": 7.14884
+    },
+    {
+      "attempt": 1,
+      "iterations": 200000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 36886.4,
+        "lastHalfMeanNs": 23870.6,
+        "relativeChange": -0.3528617593476187,
+        "lastHalfCV": 0.29670858286607765
+      },
+      "attemptMeanPerCallNs": 1.518925
+    },
+    {
+      "attempt": 2,
+      "iterations": 400000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 39999,
+        "lastHalfMeanNs": 34656.8,
+        "relativeChange": -0.13355833895847388,
+        "lastHalfCV": 0.0019475521630089845
+      },
+      "attemptMeanPerCallNs": 0.9331975
+    },
+    {
+      "attempt": 3,
+      "iterations": 800000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 97627,
+        "lastHalfMeanNs": 72648.6,
+        "relativeChange": -0.25585544982433134,
+        "lastHalfCV": 0.10163591239556073
+      },
+      "attemptMeanPerCallNs": 1.0642225
+    },
+    {
+      "attempt": 4,
+      "iterations": 1600000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 140174.8,
+        "lastHalfMeanNs": 76123.6,
+        "relativeChange": -0.4569380516326757,
+        "lastHalfCV": 0.7203686204208816
+      },
+      "attemptMeanPerCallNs": 0.6759324999999999
+    },
+    {
+      "attempt": 5,
+      "iterations": 3200000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 104101,
+        "lastHalfMeanNs": 96646.6,
+        "relativeChange": -0.07160738129316715,
+        "lastHalfCV": 0.04430232761078031
+      },
+      "attemptMeanPerCallNs": 0.313668125
+    },
+    {
+      "attempt": 6,
+      "iterations": 6400000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 196411.6,
+        "lastHalfMeanNs": 216325.8,
+        "relativeChange": 0.10139014192644417,
+        "lastHalfCV": 0.07300971041128893
+      },
+      "attemptMeanPerCallNs": 0.32245109375000003
+    }
+  ],
+  "sink": 1000000,
+  "runtimeVersion": "bun 1.3.13",
+  "combo_id": "bun-napi-control"
+}

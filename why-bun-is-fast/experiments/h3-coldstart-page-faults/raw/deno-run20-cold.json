@@ -1,0 +1,25 @@
+{
+  "run_id": "deno-run20",
+  "runtime": "deno",
+  "state": "cold",
+  "timestamp_unix": 1786969045.7992635,
+  "command": [
+    "deno",
+    "run",
+    "experiments/h3-coldstart-page-faults/benchmark/hello.js"
+  ],
+  "cache_drop_write_ok": true,
+  "cached_kb_before_drop": 408616,
+  "cached_kb_after_drop": 304180,
+  "cached_kb_dropped": 104436,
+  "status": "OK",
+  "page_faults": 2623.0,
+  "minor_faults": 2603.0,
+  "major_faults": 18.0,
+  "elapsed_s": 0.053787466,
+  "user_s": 0.009407,
+  "sys_s": 0.021947,
+  "wall_clock_python_s": 0.08180618286132812,
+  "stdout": "hello",
+  "returncode": 0
+}

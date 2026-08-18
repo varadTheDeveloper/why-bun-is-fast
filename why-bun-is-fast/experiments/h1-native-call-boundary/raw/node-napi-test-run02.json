@@ -1,0 +1,67 @@
+{
+  "run_id": "node-napi-test-run02",
+  "status": "OK",
+  "wall_clock_process_s": 0.28936290740966797,
+  "mode": "test",
+  "iterations": 10000000,
+  "numChunks": 10,
+  "perChunk": 1000000,
+  "chunkTimingsNs": [
+    22090861,
+    23132509,
+    23081502,
+    23004604,
+    23229668,
+    22353057,
+    22802372,
+    22326312,
+    22983005,
+    23826743
+  ],
+  "totalNs": 228830633,
+  "nsPerCall": 22.8830633,
+  "callsPerSec": 43700442.85111076,
+  "warmupFinalStatus": "STABLE",
+  "warmupFinalIterations": 400000,
+  "warmupAttempts": [
+    {
+      "attempt": 0,
+      "iterations": 100000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 482870.8,
+        "lastHalfMeanNs": 389412.8,
+        "relativeChange": -0.19354659672939428,
+        "lastHalfCV": 0.06198200903405092
+      },
+      "attemptMeanPerCallNs": 43.61418
+    },
+    {
+      "attempt": 1,
+      "iterations": 200000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 534499.8,
+        "lastHalfMeanNs": 464694.6,
+        "relativeChange": -0.13059911341407437,
+        "lastHalfCV": 0.02088197494677323
+      },
+      "attemptMeanPerCallNs": 24.979860000000002
+    },
+    {
+      "attempt": 2,
+      "iterations": 400000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 908991.6,
+        "lastHalfMeanNs": 896390,
+        "relativeChange": -0.013863274424098064,
+        "lastHalfCV": 0.03770818083646231
+      },
+      "attemptMeanPerCallNs": 22.56727
+    }
+  ],
+  "sink": 1000000,
+  "runtimeVersion": "node v22.22.2",
+  "combo_id": "node-napi-test"
+}

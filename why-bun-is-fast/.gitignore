@@ -1,0 +1,25 @@
+# Environment / secrets
+.env
+*.key
+*.pem
+
+# Dependencies / build output
+node_modules/
+target/
+build/
+dist/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache (benchmark orchestration scripts)
+__pycache__/
+*.pyc
+
+# Compiled benchmark artifacts (rebuild from included source + documented compiler flags)
+*.so
+*.node

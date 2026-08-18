@@ -1,0 +1,79 @@
+{
+  "run_id": "deno-ffi-nonfast-run01",
+  "status": "OK",
+  "wall_clock_process_s": 0.32749104499816895,
+  "mode": "nonfast",
+  "iterations": 10000000,
+  "numChunks": 10,
+  "perChunk": 1000000,
+  "chunkTimingsNs": [
+    22883877,
+    22817708,
+    22284248,
+    21433289,
+    22698609,
+    22961911,
+    22389948,
+    23333720,
+    22978874,
+    26871665
+  ],
+  "totalNs": 230653849,
+  "nsPerCall": 23.0653849,
+  "callsPerSec": 43355010.303773426,
+  "warmupFinalStatus": "STABLE",
+  "warmupFinalIterations": 800000,
+  "warmupAttempts": [
+    {
+      "attempt": 0,
+      "iterations": 100000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 1764857.8,
+        "lastHalfMeanNs": 1162058.2,
+        "relativeChange": -0.3415570364932518,
+        "lastHalfCV": 0.12511885101789708
+      },
+      "attemptMeanPerCallNs": 146.3458
+    },
+    {
+      "attempt": 1,
+      "iterations": 200000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 1931640.6,
+        "lastHalfMeanNs": 482354.6,
+        "relativeChange": -0.7502876052615585,
+        "lastHalfCV": 0.11302383697788639
+      },
+      "attemptMeanPerCallNs": 60.349880000000006
+    },
+    {
+      "attempt": 2,
+      "iterations": 400000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 952758.2,
+        "lastHalfMeanNs": 924294,
+        "relativeChange": -0.029875575985596297,
+        "lastHalfCV": 0.020929625089893364
+      },
+      "attemptMeanPerCallNs": 23.4631525
+    },
+    {
+      "attempt": 3,
+      "iterations": 800000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 1820661.8,
+        "lastHalfMeanNs": 2003503,
+        "relativeChange": 0.10042568037622361,
+        "lastHalfCV": 0.039351410185214375
+      },
+      "attemptMeanPerCallNs": 23.90103
+    }
+  ],
+  "sink": "1000000",
+  "runtimeVersion": "deno 2.9.5",
+  "combo_id": "deno-ffi-nonfast"
+}

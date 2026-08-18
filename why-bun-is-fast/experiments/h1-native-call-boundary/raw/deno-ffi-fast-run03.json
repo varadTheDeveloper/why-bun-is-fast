@@ -1,0 +1,67 @@
+{
+  "run_id": "deno-ffi-fast-run03",
+  "status": "OK",
+  "wall_clock_process_s": 0.08849787712097168,
+  "mode": "fast",
+  "iterations": 10000000,
+  "numChunks": 10,
+  "perChunk": 1000000,
+  "chunkTimingsNs": [
+    4642435,
+    5165288,
+    4487092,
+    5411833,
+    4789509,
+    4687016,
+    4567274,
+    4730166,
+    5166828,
+    4707269
+  ],
+  "totalNs": 48354710,
+  "nsPerCall": 4.835471,
+  "callsPerSec": 206805086.82608166,
+  "warmupFinalStatus": "STABLE",
+  "warmupFinalIterations": 400000,
+  "warmupAttempts": [
+    {
+      "attempt": 0,
+      "iterations": 100000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 582222.2,
+        "lastHalfMeanNs": 58269.2,
+        "relativeChange": -0.8999193091572255,
+        "lastHalfCV": 0.2894309517140925
+      },
+      "attemptMeanPerCallNs": 32.024570000000004
+    },
+    {
+      "attempt": 1,
+      "iterations": 200000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 102452.4,
+        "lastHalfMeanNs": 97354.6,
+        "relativeChange": -0.04975774115589277,
+        "lastHalfCV": 0.030788388520622177
+      },
+      "attemptMeanPerCallNs": 4.995175
+    },
+    {
+      "attempt": 2,
+      "iterations": 400000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 195167.4,
+        "lastHalfMeanNs": 187737.2,
+        "relativeChange": -0.03807090733390916,
+        "lastHalfCV": 0.05574966421063812
+      },
+      "attemptMeanPerCallNs": 4.7863074999999995
+    }
+  ],
+  "sink": 1000000,
+  "runtimeVersion": "deno 2.9.5",
+  "combo_id": "deno-ffi-fast"
+}

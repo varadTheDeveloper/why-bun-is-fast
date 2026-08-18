@@ -1,0 +1,105 @@
+{
+  "experiment_id": "h5-buffer-pool",
+  "experiment_name": "H5 - Buffer Allocation Pooling Asymmetry",
+  "hypothesis_id": "H5",
+  "run_batch_id": "h5-run-2026-08-17",
+  "timestamp_utc_start": "2026-08-17T11:54:00Z",
+  "timestamp_utc_end": "2026-08-17T12:02:00Z",
+  "total_wall_clock_seconds_approx": 480,
+
+  "machine": {
+    "anonymized_machine_id": "shared-cloud-sandbox-vm",
+    "dedicated_or_shared": "SHARED — same cloud sandbox used for H4/H6, not dedicated benchmarking hardware. H5 has no HTTP load generator or Postgres server co-resident, so it is less exposed to that specific confound than H4/H6, but it is NOT dedicated/production-grade hardware and this is not claimed to be authoritative production evidence.",
+    "container_vm_or_native": "VM (KVM guest)",
+    "load_average_at_run_start": "0.51, 0.31, 0.12 (1/5/15 min) — low, no other CPU-heavy process observed via ps aux besides the session's own management processes"
+  },
+
+  "hardware": {
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "cpu_cores_physical": 2,
+    "cpu_cores_logical": 2,
+    "ram_total_gb": 7.8
+  },
+
+  "os": {
+    "name": "Ubuntu",
+    "version": "24.04.4 LTS (Noble Numbat)",
+    "kernel": "6.18.5-fc-v20",
+    "architecture": "x86_64"
+  },
+
+  "runtime_build_track": {
+    "spec_requested": "Primary track: source-controlled builds at the exact pinned commits (Bun 8326d1bd39a96f1f298c3de195aad15972d4f3b4, Node ad7a5b8302ae54b6e6dc77e03eabc5a3218dfb85).",
+    "actual_track_used": "RELEASE BUILDS for BOTH runtimes (documented deviation).",
+    "deviation_reason": "Attempted to build Bun from source at the pinned commit. Bun's rust-toolchain.toml requires Rust nightly-2026-07-20. `rustup toolchain install` failed: `error downloading file from 'https://static.rust-lang.org/dist/2026-07-20/channel-rust-nightly.toml.sha256' ... tunnel error: unsuccessful`. Verified independently via direct curl: `curl -s -o /dev/null -w '%{http_code}' https://static.rust-lang.org/` returned `000` (hard connection failure, not an HTTP-level error). This is a real, verified environmental network restriction in this sandbox, not an assumption. Because a from-source Bun build was infeasible, the release-build track was used for BOTH Bun and Node (same consistent track on both sides of the comparison), matching the approach already used and user-approved for H4 and H6.",
+    "bun_benchmarked_binary": {
+      "version": "1.3.13",
+      "install_method": "release (pre-installed in sandbox)",
+      "git_commit_of_benchmarked_binary": "N/A — release build, not built from source in this session"
+    },
+    "node_benchmarked_binary": {
+      "version": "v22.22.2",
+      "install_method": "release (pre-installed in sandbox)",
+      "git_commit_of_benchmarked_binary": "N/A — release build, not built from source in this session"
+    },
+    "pinned_source_commits_used_for_mechanism_citation_only": {
+      "bun": "8326d1bd39a96f1f298c3de195aad15972d4f3b4 (repos/bun, local clone) — used ONLY to read src/jsc/bindings/JSBuffer.cpp for the allocUnsafe() code path. NOT built, NOT the benchmarked binary.",
+      "node": "ad7a5b8302ae54b6e6dc77e03eabc5a3218dfb85 — fetched as a single raw file (lib/buffer.js) via `raw.githubusercontent.com` (HTTP 200), NOT cloned/built. Used ONLY to read the pooling logic. NOT the benchmarked binary."
+    },
+    "IMPORTANT_verified_source_vs_binary_divergence": "Per the H5 protocol's explicit instruction ('do not assume that a source pin means the binary actually corresponds to that commit without verifying it'), the pinned Node commit's lib/buffer.js was checked against the actual behavior of the benchmarked v22.22.2 binary, and a real, concrete divergence was found: the pinned commit's source sets `Buffer.poolSize = 64 * 1024` (65536, i.e. a 64KB pool with a 32KB pooling threshold at `size < poolSize>>>1`), but the installed v22.22.2 binary was empirically verified (see 'node_pooling_verification' below) to use `Buffer.poolSize = 8192` (8KB pool, 4KB threshold) — the long-standing Node default, not the pinned commit's value. This means the pinned commit is NOT representative of the poolSize/threshold constants actually exercised by the benchmarked binary, even though the underlying POOLING MECHANISM (branch on `size < threshold` -> slice from a shared pool vs. `createUnsafeBuffer` fresh allocation) is structurally the same in both. All quantitative interpretation below uses the EMPIRICALLY VERIFIED v22.22.2 threshold (4096 bytes), not the pinned commit's constant."
+  },
+
+  "node_pooling_verification": {
+    "method": "Directly probed the benchmarked v22.22.2 binary's actual Buffer behavior rather than trusting source-read constants alone.",
+    "buffer_poolSize_reported_by_binary": 8192,
+    "empirical_test": "Allocated 5 consecutive Buffer.allocUnsafe(size) buffers per size and compared `.buffer` (underlying ArrayBuffer) identity across them.",
+    "results": {
+      "16": "pooled (4/4 share one 8192-byte ArrayBuffer)",
+      "64": "pooled (4/4 share one 8192-byte ArrayBuffer)",
+      "256": "pooled (4/4 share one 8192-byte ArrayBuffer)",
+      "1024": "pooled (4/4 share one 8192-byte ArrayBuffer)",
+      "4096": "NOT pooled (0/4 shared; each gets its own 4096-byte ArrayBuffer)",
+      "4097": "NOT pooled (0/4 shared; each gets its own 4097-byte ArrayBuffer)",
+      "16384": "NOT pooled (0/4 shared; each gets its own 16384-byte ArrayBuffer)"
+    },
+    "conclusion": "Confirms the pooling threshold on the ACTUAL benchmarked binary is exactly 4096 bytes (size < 4096 -> pooled; size >= 4096 -> fresh allocation), consistent with `size < (Buffer.poolSize >>> 1)` where Buffer.poolSize=8192. This places 3 of the 6 tested sizes (16, 64, 256, 1024) inside the pooled regime and 2 sizes (4096, 16384) outside it, with size=256... wait size=1024 also inside. See results/README.md for the resulting performance pattern."
+  },
+
+  "bun_pooling_verification": {
+    "method": "Same empirical ArrayBuffer-identity probe applied to the benchmarked Bun 1.3.13 binary.",
+    "results_all_sizes_tested": "16, 64, 1024, 4096, 16384: 0/4 pooled at every size — every Buffer.allocUnsafe() call returns a distinct, freshly-sized ArrayBuffer.",
+    "conclusion": "Confirms Bun performs NO pooling at any tested size — consistent with source-read (src/jsc/bindings/JSBuffer.cpp: jsBufferConstructorFunction_allocUnsafeBody unconditionally calls createUninitializedBuffer() -> JSC::JSUint8Array::createUninitialized(), no pool/threshold branch)."
+  },
+
+  "environment_variables": { "non_default_vars_set": {} },
+
+  "background_workload": {
+    "description": "Same shared sandbox as H4/H6. No HTTP load generator or database server running concurrently for H5 (unlike H4/H6) — each timed run is a single short-lived child process launched via /usr/bin/time -v, measured via in-process process.hrtime.bigint(), not network round-trips. This reduces (but does not eliminate) exposure to host-level noise.",
+    "other_processes_running": ["session management processes (claude CLI, environment-manager) — low, roughly constant CPU usage, present identically across all runs"]
+  },
+
+  "warmup": {
+    "start_iterations": 50000,
+    "chunking": "10 chunks during warmup phase, timed individually via process.hrtime.bigint()",
+    "stability_check_predefined_before_any_run": "Compare mean per-chunk time of last half of chunks vs first half. Stable if |relative_change| <= 0.15 AND CV of last-half chunk timings <= 0.25. This exact rule was written into orchestrate.py's chunk_stability_check() BEFORE the experiment was executed and was NOT modified after seeing results.",
+    "max_extensions": 3,
+    "extension_multiplier": 2,
+    "outcome": "Only 2 of 12 runtime x size combos (bun-64, bun-1024) reached the declared STABLE state within the bounded extensions; the other 10 combos hit UNSTABLE_AFTER_MAX_EXTENSIONS at 400,000 warmup iterations (8x the starting 50,000). See results/README.md 'Surprising findings' and 'Data-quality assessment' for full disclosure and interpretation — this is reported as a genuine methodological finding, not hidden or silently patched."
+  },
+
+  "timed_runs": {
+    "iterations_per_run": 1000000,
+    "runs_per_combo": 10,
+    "combos": 12,
+    "total_runs": 120,
+    "failed_runs": 0,
+    "fresh_process_per_run": true,
+    "wrapper": "/usr/bin/time -v <runtime> alloc-bench.js <size> 1000000 4096 timed — used to capture Maximum resident set size (peak RSS) per run in addition to alloc-bench.js's own process.hrtime.bigint()-based throughput measurement."
+  },
+
+  "ring_buffer_size": 4096,
+
+  "gc_instrumentation_note": "GC activity/pause counters were NOT collected in the main timed runs. Node exposes --expose-gc/perf_hooks GC instrumentation; Bun's GC is JSC-based with different instrumentation. Rather than force a comparison on non-equivalent counters (which the H5 protocol explicitly cautioned against), this was omitted from the primary measurement and is disclosed as a limitation, not silently worked around.",
+
+  "notes": "Full raw per-run JSON preserved individually in ../raw/<run_id>.json, plus ../raw/run_index.json (all 120 entries) and ../raw/warmup_log.json (all warmup attempts, including unstable ones, for all 12 combos). Benchmark source (alloc-bench.js, orchestrate.py, analyze.py) preserved in ../benchmark/."
+}

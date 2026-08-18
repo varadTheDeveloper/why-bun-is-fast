@@ -1,0 +1,24 @@
+{
+  "run_id": "node-run25",
+  "runtime": "node",
+  "state": "cold",
+  "timestamp_unix": 1786969042.737658,
+  "command": [
+    "node",
+    "experiments/h3-coldstart-page-faults/benchmark/hello.js"
+  ],
+  "cache_drop_write_ok": true,
+  "cached_kb_before_drop": 429992,
+  "cached_kb_after_drop": 304100,
+  "cached_kb_dropped": 125892,
+  "status": "OK",
+  "page_faults": 2501.0,
+  "minor_faults": 2469.0,
+  "major_faults": 32.0,
+  "elapsed_s": 0.078260886,
+  "user_s": 0.014648,
+  "sys_s": 0.029296,
+  "wall_clock_python_s": 0.10940027236938477,
+  "stdout": "hello",
+  "returncode": 0
+}

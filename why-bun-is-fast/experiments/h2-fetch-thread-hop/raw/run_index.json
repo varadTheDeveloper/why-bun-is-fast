@@ -1,0 +1,3008 @@
+[
+  {
+    "run_id": "bun-cold-run01",
+    "runtime": "bun",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.14913535118103027,
+    "server_cpu_percent_during_run": 67.0,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 443993.91
+      }
+    ],
+    "totalNs": 3881531,
+    "throughputPerSec": 2576.3030103327783,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-cold-run02",
+    "runtime": "bun",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.16644811630249023,
+    "server_cpu_percent_during_run": 66.1,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 498560.6766666667
+      }
+    ],
+    "totalNs": 4586357,
+    "throughputPerSec": 2180.37976546527,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-cold-run03",
+    "runtime": "bun",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.155029296875,
+    "server_cpu_percent_during_run": 64.5,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 461017.60333333333
+      }
+    ],
+    "totalNs": 4151029,
+    "throughputPerSec": 2409.0412280906735,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-cold-run04",
+    "runtime": "bun",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.16268444061279297,
+    "server_cpu_percent_during_run": 67.6,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 482586.87
+      }
+    ],
+    "totalNs": 4771368,
+    "throughputPerSec": 2095.834989042975,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-cold-run05",
+    "runtime": "bun",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.16536521911621094,
+    "server_cpu_percent_during_run": 60.4,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 495460.79333333333
+      }
+    ],
+    "totalNs": 4242971,
+    "throughputPerSec": 2356.8391110851335,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-cold-run06",
+    "runtime": "bun",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.14592981338500977,
+    "server_cpu_percent_during_run": 54.8,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 435390.68333333335
+      }
+    ],
+    "totalNs": 3499298,
+    "throughputPerSec": 2857.7160333301135,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-cold-run07",
+    "runtime": "bun",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.15856599807739258,
+    "server_cpu_percent_during_run": 63.0,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 473497.23333333334
+      }
+    ],
+    "totalNs": 4775725,
+    "throughputPerSec": 2093.922912227986,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-cold-run08",
+    "runtime": "bun",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.1484208106994629,
+    "server_cpu_percent_during_run": 60.6,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 441932
+      }
+    ],
+    "totalNs": 3396467,
+    "throughputPerSec": 2944.235878046217,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-cold-run09",
+    "runtime": "bun",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.1457536220550537,
+    "server_cpu_percent_during_run": 68.6,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 433122.16333333333
+      }
+    ],
+    "totalNs": 4472815,
+    "throughputPerSec": 2235.7285065445362,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-cold-run10",
+    "runtime": "bun",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.1457962989807129,
+    "server_cpu_percent_during_run": 68.6,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 430750.00333333336
+      }
+    ],
+    "totalNs": 4858106,
+    "throughputPerSec": 2058.4153577546476,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "node-cold-run01",
+    "runtime": "node",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.565570592880249,
+    "server_cpu_percent_during_run": 26.5,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 1714082.8
+      }
+    ],
+    "totalNs": 12698085,
+    "throughputPerSec": 787.5203229463341,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-cold-run02",
+    "runtime": "node",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.5790061950683594,
+    "server_cpu_percent_during_run": 24.2,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 1771550.8733333333
+      }
+    ],
+    "totalNs": 13185601,
+    "throughputPerSec": 758.4030489016011,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-cold-run03",
+    "runtime": "node",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.5493662357330322,
+    "server_cpu_percent_during_run": 29.1,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 1695878.2866666666
+      }
+    ],
+    "totalNs": 12505870,
+    "throughputPerSec": 799.6244963365203,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-cold-run04",
+    "runtime": "node",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.553246021270752,
+    "server_cpu_percent_during_run": 25.3,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 1701459.87
+      }
+    ],
+    "totalNs": 12187976,
+    "throughputPerSec": 820.480775479046,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-cold-run05",
+    "runtime": "node",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.5114240646362305,
+    "server_cpu_percent_during_run": 25.4,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 1576852.16
+      }
+    ],
+    "totalNs": 10804929,
+    "throughputPerSec": 925.5035363952878,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-cold-run06",
+    "runtime": "node",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.5231227874755859,
+    "server_cpu_percent_during_run": 26.8,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 1600560.55
+      }
+    ],
+    "totalNs": 12749682,
+    "throughputPerSec": 784.333287685136,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-cold-run07",
+    "runtime": "node",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.6341521739959717,
+    "server_cpu_percent_during_run": 22.1,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 1958991
+      }
+    ],
+    "totalNs": 12480652,
+    "throughputPerSec": 801.2401916181943,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-cold-run08",
+    "runtime": "node",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.5531880855560303,
+    "server_cpu_percent_during_run": 27.1,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 1697228.0166666666
+      }
+    ],
+    "totalNs": 12725829,
+    "throughputPerSec": 785.8034238869625,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-cold-run09",
+    "runtime": "node",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.5451345443725586,
+    "server_cpu_percent_during_run": 25.7,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 1677624.1766666668
+      }
+    ],
+    "totalNs": 11305928,
+    "throughputPerSec": 884.4917462768204,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-cold-run10",
+    "runtime": "node",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.5532689094543457,
+    "server_cpu_percent_during_run": 27.1,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 1692209.46
+      }
+    ],
+    "totalNs": 12699072,
+    "throughputPerSec": 787.4591151227428,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "deno-cold-run01",
+    "runtime": "deno",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.25557756423950195,
+    "server_cpu_percent_during_run": 54.8,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 714352.6233333333
+      }
+    ],
+    "totalNs": 8489455,
+    "throughputPerSec": 1177.931916713146,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-cold-run02",
+    "runtime": "deno",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.25721240043640137,
+    "server_cpu_percent_during_run": 50.5,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 729512.6733333333
+      }
+    ],
+    "totalNs": 6592956,
+    "throughputPerSec": 1516.7703227505235,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-cold-run03",
+    "runtime": "deno",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.2584805488586426,
+    "server_cpu_percent_during_run": 54.2,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 714139.1533333333
+      }
+    ],
+    "totalNs": 6701105,
+    "throughputPerSec": 1492.2911967503867,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-cold-run04",
+    "runtime": "deno",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.2548847198486328,
+    "server_cpu_percent_during_run": 54.9,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 721772.5233333333
+      }
+    ],
+    "totalNs": 7135871,
+    "throughputPerSec": 1401.3706245530502,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-cold-run05",
+    "runtime": "deno",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.24771523475646973,
+    "server_cpu_percent_during_run": 56.5,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 693494.4066666666
+      }
+    ],
+    "totalNs": 6735937,
+    "throughputPerSec": 1484.5744548976631,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-cold-run06",
+    "runtime": "deno",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.25055837631225586,
+    "server_cpu_percent_during_run": 51.9,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 705087.61
+      }
+    ],
+    "totalNs": 6810395,
+    "throughputPerSec": 1468.3436129622437,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-cold-run07",
+    "runtime": "deno",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.2492384910583496,
+    "server_cpu_percent_during_run": 52.1,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 706030.1333333333
+      }
+    ],
+    "totalNs": 6627933,
+    "throughputPerSec": 1508.7660059327698,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-cold-run08",
+    "runtime": "deno",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.24835824966430664,
+    "server_cpu_percent_during_run": 52.3,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 707167.9933333333
+      }
+    ],
+    "totalNs": 5716572,
+    "throughputPerSec": 1749.3001050279784,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-cold-run09",
+    "runtime": "deno",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.24979567527770996,
+    "server_cpu_percent_during_run": 56.0,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 700915.1366666667
+      }
+    ],
+    "totalNs": 6521991,
+    "throughputPerSec": 1533.274118286885,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-cold-run10",
+    "runtime": "deno",
+    "mode": "cold",
+    "timed_count_requested": 10,
+    "wall_clock_process_s": 0.2541341781616211,
+    "server_cpu_percent_during_run": 51.1,
+    "connection_verification": {
+      "client_connections_opened": 310,
+      "keepalive_requests_delta": 0,
+      "cold_requests_delta": 310
+    },
+    "status": "OK",
+    "timedCount": 10,
+    "errors": 0,
+    "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+    "warmupFinalIterations": 300,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 300,
+        "attemptMeanPerRequestNs": 715086.0366666666
+      }
+    ],
+    "totalNs": 6282522,
+    "throughputPerSec": 1591.7174663296046,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "bun-keepalive-run01",
+    "runtime": "bun",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 2.215543270111084,
+    "server_cpu_percent_during_run": 58.2,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 13000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 2000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 14984275.4,
+          "lastHalfMeanNs": 15983029.2,
+          "relativeChange": 0.06665345993307083,
+          "lastHalfCV": 0.03762672250179832
+        },
+        "attemptMeanPerRequestNs": 154836.52300000002
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 34459185.8,
+          "lastHalfMeanNs": 34864113.2,
+          "relativeChange": 0.011750927672818259,
+          "lastHalfCV": 0.053227619865915454
+        },
+        "attemptMeanPerRequestNs": 173308.2475
+      }
+    ],
+    "totalNs": 1700853706,
+    "throughputPerSec": 5879.400423871611,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-keepalive-run02",
+    "runtime": "bun",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 2.1768131256103516,
+    "server_cpu_percent_during_run": 57.9,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 13000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 2000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 18727225.6,
+          "lastHalfMeanNs": 16906970.8,
+          "relativeChange": -0.0971983164446954,
+          "lastHalfCV": 0.05859600775240097
+        },
+        "attemptMeanPerRequestNs": 178170.982
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 32490887.8,
+          "lastHalfMeanNs": 32134740.6,
+          "relativeChange": -0.010961448705011971,
+          "lastHalfCV": 0.034102321848675246
+        },
+        "attemptMeanPerRequestNs": 161564.071
+      }
+    ],
+    "totalNs": 1662291929,
+    "throughputPerSec": 6015.790503185436,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-keepalive-run03",
+    "runtime": "bun",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 2.145570755004883,
+    "server_cpu_percent_during_run": 58.3,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 13000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 2000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 18361361,
+          "lastHalfMeanNs": 16244197.4,
+          "relativeChange": -0.1153053741495524,
+          "lastHalfCV": 0.03788767443119913
+        },
+        "attemptMeanPerRequestNs": 173027.792
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 30734861,
+          "lastHalfMeanNs": 34473504.8,
+          "relativeChange": 0.12164179951879389,
+          "lastHalfCV": 0.11990979279994576
+        },
+        "attemptMeanPerRequestNs": 163020.91449999998
+      }
+    ],
+    "totalNs": 1632301631,
+    "throughputPerSec": 6126.318696302276,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-keepalive-run04",
+    "runtime": "bun",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 2.1742916107177734,
+    "server_cpu_percent_during_run": 57.9,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 13000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 2000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 17188382.2,
+          "lastHalfMeanNs": 17158009.2,
+          "relativeChange": -0.001767065663689978,
+          "lastHalfCV": 0.03793013134803257
+        },
+        "attemptMeanPerRequestNs": 171731.957
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 32518021,
+          "lastHalfMeanNs": 32100348.2,
+          "relativeChange": -0.012844348676692248,
+          "lastHalfCV": 0.05498334091842445
+        },
+        "attemptMeanPerRequestNs": 161545.923
+      }
+    ],
+    "totalNs": 1665457788,
+    "throughputPerSec": 6004.35512208851,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-keepalive-run05",
+    "runtime": "bun",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 2.8434462547302246,
+    "server_cpu_percent_during_run": 58.0,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 20432938.8,
+          "lastHalfMeanNs": 16799418.4,
+          "relativeChange": -0.17782661787251094,
+          "lastHalfCV": 0.04030816580519741
+        },
+        "attemptMeanPerRequestNs": 186161.78600000002
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 30752646.6,
+          "lastHalfMeanNs": 33108982.2,
+          "relativeChange": 0.0766222052576118,
+          "lastHalfCV": 0.02842797038905175
+        },
+        "attemptMeanPerRequestNs": 159654.072
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 64697401.8,
+          "lastHalfMeanNs": 67671359.8,
+          "relativeChange": 0.04596719369339496,
+          "lastHalfCV": 0.058239385117698536
+        },
+        "attemptMeanPerRequestNs": 165460.952
+      }
+    ],
+    "totalNs": 1662154204,
+    "throughputPerSec": 6016.288967614945,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-keepalive-run06",
+    "runtime": "bun",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 2.823986053466797,
+    "server_cpu_percent_during_run": 58.4,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 19084510,
+          "lastHalfMeanNs": 15747257.2,
+          "relativeChange": -0.17486709378443568,
+          "lastHalfCV": 0.06057922559775757
+        },
+        "attemptMeanPerRequestNs": 174158.836
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 32057572.2,
+          "lastHalfMeanNs": 32207007,
+          "relativeChange": 0.004661450937947221,
+          "lastHalfCV": 0.053436765788361984
+        },
+        "attemptMeanPerRequestNs": 160661.448
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 64235701.4,
+          "lastHalfMeanNs": 65684876.2,
+          "relativeChange": 0.022560270510255602,
+          "lastHalfCV": 0.020408370540564727
+        },
+        "attemptMeanPerRequestNs": 162400.72199999998
+      }
+    ],
+    "totalNs": 1664449921,
+    "throughputPerSec": 6007.99091269265,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-keepalive-run07",
+    "runtime": "bun",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 2.8285892009735107,
+    "server_cpu_percent_during_run": 58.7,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 18197470.6,
+          "lastHalfMeanNs": 14657962,
+          "relativeChange": -0.19450552649883118,
+          "lastHalfCV": 0.10041040729437244
+        },
+        "attemptMeanPerRequestNs": 164277.163
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 30196018.8,
+          "lastHalfMeanNs": 32250511.2,
+          "relativeChange": 0.06803851903814546,
+          "lastHalfCV": 0.058987764329673543
+        },
+        "attemptMeanPerRequestNs": 156116.325
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 63710362.2,
+          "lastHalfMeanNs": 68683054.4,
+          "relativeChange": 0.07805154496516115,
+          "lastHalfCV": 0.11249679450269082
+        },
+        "attemptMeanPerRequestNs": 165491.77075
+      }
+    ],
+    "totalNs": 1676860868,
+    "throughputPerSec": 5963.5239815257,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-keepalive-run08",
+    "runtime": "bun",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 2.944772243499756,
+    "server_cpu_percent_during_run": 58.4,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 20298030.4,
+          "lastHalfMeanNs": 16969907,
+          "relativeChange": -0.16396287395450934,
+          "lastHalfCV": 0.05452326993550743
+        },
+        "attemptMeanPerRequestNs": 186339.687
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 35401650.4,
+          "lastHalfMeanNs": 33657877.4,
+          "relativeChange": -0.04925682786811544,
+          "lastHalfCV": 0.052937128745683015
+        },
+        "attemptMeanPerRequestNs": 172648.81949999998
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 70228197.6,
+          "lastHalfMeanNs": 69465780,
+          "relativeChange": -0.010856288870497713,
+          "lastHalfCV": 0.059001690196900186
+        },
+        "attemptMeanPerRequestNs": 174617.47199999998
+      }
+    ],
+    "totalNs": 1700773461,
+    "throughputPerSec": 5879.677822653889,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-keepalive-run09",
+    "runtime": "bun",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 2.981274366378784,
+    "server_cpu_percent_during_run": 57.7,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 19903754.4,
+          "lastHalfMeanNs": 16724740.6,
+          "relativeChange": -0.15971930401231232,
+          "lastHalfCV": 0.04496458482242785
+        },
+        "attemptMeanPerRequestNs": 183142.475
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 33942238.6,
+          "lastHalfMeanNs": 33769339.4,
+          "relativeChange": -0.005093924476743351,
+          "lastHalfCV": 0.06714335074562612
+        },
+        "attemptMeanPerRequestNs": 169278.945
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 71261166.6,
+          "lastHalfMeanNs": 68687081,
+          "relativeChange": -0.03612185602361433,
+          "lastHalfCV": 0.06533418177719891
+        },
+        "attemptMeanPerRequestNs": 174935.3095
+      }
+    ],
+    "totalNs": 1742018525,
+    "throughputPerSec": 5740.467082575945,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "bun-keepalive-run10",
+    "runtime": "bun",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 3.0556156635284424,
+    "server_cpu_percent_during_run": 56.9,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 24419770.8,
+          "lastHalfMeanNs": 22003927.4,
+          "relativeChange": -0.0989298146893337,
+          "lastHalfCV": 0.06168912710029318
+        },
+        "attemptMeanPerRequestNs": 232118.491
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 38712736.2,
+          "lastHalfMeanNs": 34137817.2,
+          "relativeChange": -0.11817606940425977,
+          "lastHalfCV": 0.04397098293601778
+        },
+        "attemptMeanPerRequestNs": 182126.38350000003
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 72406512.2,
+          "lastHalfMeanNs": 72105658.6,
+          "relativeChange": -0.004155062726526536,
+          "lastHalfCV": 0.08820527680872241
+        },
+        "attemptMeanPerRequestNs": 180640.2135
+      }
+    ],
+    "totalNs": 1721098453,
+    "throughputPerSec": 5810.242861219979,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "bun 1.3.13"
+  },
+  {
+    "run_id": "node-keepalive-run01",
+    "runtime": "node",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 10.602579593658447,
+    "server_cpu_percent_during_run": 40.6,
+    "connection_verification": {
+      "client_connections_opened": 2,
+      "keepalive_requests_delta": 41000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 16000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 90600302.6,
+          "lastHalfMeanNs": 59644945.4,
+          "relativeChange": -0.3416694681105844,
+          "lastHalfCV": 0.1299813745333506
+        },
+        "attemptMeanPerRequestNs": 751226.24
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 109526243.4,
+          "lastHalfMeanNs": 80948634.6,
+          "relativeChange": -0.26092019513197334,
+          "lastHalfCV": 0.2430927444098015
+        },
+        "attemptMeanPerRequestNs": 476187.195
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 137377425.6,
+          "lastHalfMeanNs": 108054958.8,
+          "relativeChange": -0.2134445792089439,
+          "lastHalfCV": 0.16761318679726991
+        },
+        "attemptMeanPerRequestNs": 306790.4805
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 192846827.6,
+          "lastHalfMeanNs": 176915517.8,
+          "relativeChange": -0.08261121014157655,
+          "lastHalfCV": 0.0405483209908438
+        },
+        "attemptMeanPerRequestNs": 231101.465875
+      },
+      {
+        "attempt": 4,
+        "iterations": 16000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 358071747,
+          "lastHalfMeanNs": 359286756.8,
+          "relativeChange": 0.0033932020891891588,
+          "lastHalfCV": 0.04728021149267821
+        },
+        "attemptMeanPerRequestNs": 224174.5324375
+      }
+    ],
+    "totalNs": 2200171415,
+    "throughputPerSec": 4545.100409824205,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-keepalive-run02",
+    "runtime": "node",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 10.988414764404297,
+    "server_cpu_percent_during_run": 40.5,
+    "connection_verification": {
+      "client_connections_opened": 2,
+      "keepalive_requests_delta": 41000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 16000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 86997949.4,
+          "lastHalfMeanNs": 57754135.8,
+          "relativeChange": -0.33614371145166333,
+          "lastHalfCV": 0.14578616189088703
+        },
+        "attemptMeanPerRequestNs": 723760.426
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 107680071.4,
+          "lastHalfMeanNs": 81145195.2,
+          "relativeChange": -0.24642327828174157,
+          "lastHalfCV": 0.16512360945450655
+        },
+        "attemptMeanPerRequestNs": 472063.1665
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 138316644.8,
+          "lastHalfMeanNs": 92932457.8,
+          "relativeChange": -0.32811804440184056,
+          "lastHalfCV": 0.08674047753593424
+        },
+        "attemptMeanPerRequestNs": 289061.37825
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 183483972.2,
+          "lastHalfMeanNs": 187148800.6,
+          "relativeChange": 0.019973561483644434,
+          "lastHalfCV": 0.06459159031180116
+        },
+        "attemptMeanPerRequestNs": 231645.483
+      },
+      {
+        "attempt": 4,
+        "iterations": 16000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 377965188.2,
+          "lastHalfMeanNs": 396063008.4,
+          "relativeChange": 0.04788224091797454,
+          "lastHalfCV": 0.044306344694817486
+        },
+        "attemptMeanPerRequestNs": 241883.8114375
+      }
+    ],
+    "totalNs": 2406421379,
+    "throughputPerSec": 4155.548187556224,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-keepalive-run03",
+    "runtime": "node",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 10.665558099746704,
+    "server_cpu_percent_during_run": 40.2,
+    "connection_verification": {
+      "client_connections_opened": 2,
+      "keepalive_requests_delta": 41000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 16000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 84499816.6,
+          "lastHalfMeanNs": 53639669,
+          "relativeChange": -0.3652096399934671,
+          "lastHalfCV": 0.1301861081043753
+        },
+        "attemptMeanPerRequestNs": 690697.428
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 101346795.4,
+          "lastHalfMeanNs": 80938147.4,
+          "relativeChange": -0.20137437912516373,
+          "lastHalfCV": 0.1852564293549238
+        },
+        "attemptMeanPerRequestNs": 455712.357
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 140670012,
+          "lastHalfMeanNs": 94308185.4,
+          "relativeChange": -0.3295786069883892,
+          "lastHalfCV": 0.12746957354815197
+        },
+        "attemptMeanPerRequestNs": 293722.74675
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 206781920.6,
+          "lastHalfMeanNs": 185152601.2,
+          "relativeChange": -0.10459966392245612,
+          "lastHalfCV": 0.044565545843873365
+        },
+        "attemptMeanPerRequestNs": 244959.07612500002
+      },
+      {
+        "attempt": 4,
+        "iterations": 16000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 373558120,
+          "lastHalfMeanNs": 360279166.4,
+          "relativeChange": -0.03554722247772321,
+          "lastHalfCV": 0.039977032040811544
+        },
+        "attemptMeanPerRequestNs": 229324.152
+      }
+    ],
+    "totalNs": 2225833720,
+    "throughputPerSec": 4492.698583072954,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-keepalive-run04",
+    "runtime": "node",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 10.847352504730225,
+    "server_cpu_percent_during_run": 40.2,
+    "connection_verification": {
+      "client_connections_opened": 2,
+      "keepalive_requests_delta": 41000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 16000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 80366798.6,
+          "lastHalfMeanNs": 54390815.8,
+          "relativeChange": -0.3232178368742437,
+          "lastHalfCV": 0.1298112119556448
+        },
+        "attemptMeanPerRequestNs": 673788.072
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 92806173,
+          "lastHalfMeanNs": 69488177,
+          "relativeChange": -0.25125479530332534,
+          "lastHalfCV": 0.22384084033496107
+        },
+        "attemptMeanPerRequestNs": 405735.875
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 148879074.2,
+          "lastHalfMeanNs": 111271152,
+          "relativeChange": -0.25260717399060767,
+          "lastHalfCV": 0.095915999662615
+        },
+        "attemptMeanPerRequestNs": 325187.78275
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 182638448,
+          "lastHalfMeanNs": 185465880,
+          "relativeChange": 0.015481033872999183,
+          "lastHalfCV": 0.08399273328692937
+        },
+        "attemptMeanPerRequestNs": 230065.205
+      },
+      {
+        "attempt": 4,
+        "iterations": 16000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 354788034.6,
+          "lastHalfMeanNs": 405291439.6,
+          "relativeChange": 0.1423481066855573,
+          "lastHalfCV": 0.020391152499947048
+        },
+        "attemptMeanPerRequestNs": 237524.83568750002
+      }
+    ],
+    "totalNs": 2384720802,
+    "throughputPerSec": 4193.363009880769,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-keepalive-run05",
+    "runtime": "node",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 10.463688135147095,
+    "server_cpu_percent_during_run": 40.6,
+    "connection_verification": {
+      "client_connections_opened": 2,
+      "keepalive_requests_delta": 41000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 16000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 84208625.4,
+          "lastHalfMeanNs": 59961401,
+          "relativeChange": -0.2879422895792811,
+          "lastHalfCV": 0.09801344875997192
+        },
+        "attemptMeanPerRequestNs": 720850.132
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 104861209.4,
+          "lastHalfMeanNs": 77538353.6,
+          "relativeChange": -0.2605620892257229,
+          "lastHalfCV": 0.16987343102325872
+        },
+        "attemptMeanPerRequestNs": 455998.9075
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 139650883,
+          "lastHalfMeanNs": 98205868.4,
+          "relativeChange": -0.29677588647971526,
+          "lastHalfCV": 0.17624989051907194
+        },
+        "attemptMeanPerRequestNs": 297320.93925
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 181523875.6,
+          "lastHalfMeanNs": 180188798,
+          "relativeChange": -0.007354831950271527,
+          "lastHalfCV": 0.07103774257827808
+        },
+        "attemptMeanPerRequestNs": 226070.421
+      },
+      {
+        "attempt": 4,
+        "iterations": 16000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 358917189.8,
+          "lastHalfMeanNs": 349242098.6,
+          "relativeChange": -0.026956332755729125,
+          "lastHalfCV": 0.04737523101182018
+        },
+        "attemptMeanPerRequestNs": 221299.777625
+      }
+    ],
+    "totalNs": 2255730309,
+    "throughputPerSec": 4433.154069926539,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-keepalive-run06",
+    "runtime": "node",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 18.498509407043457,
+    "server_cpu_percent_during_run": 42.3,
+    "connection_verification": {
+      "client_connections_opened": 2,
+      "keepalive_requests_delta": 73000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 32000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 89940062.4,
+          "lastHalfMeanNs": 55556703.2,
+          "relativeChange": -0.3822919206691589,
+          "lastHalfCV": 0.10908247725247362
+        },
+        "attemptMeanPerRequestNs": 727483.828
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 109215859,
+          "lastHalfMeanNs": 95259180,
+          "relativeChange": -0.12778985696573608,
+          "lastHalfCV": 0.23185364721016571
+        },
+        "attemptMeanPerRequestNs": 511187.5975
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 145284185.2,
+          "lastHalfMeanNs": 98419885,
+          "relativeChange": -0.32256986633119095,
+          "lastHalfCV": 0.09210093281857343
+        },
+        "attemptMeanPerRequestNs": 304630.08775
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 221353041.4,
+          "lastHalfMeanNs": 187070945.2,
+          "relativeChange": -0.15487519838523447,
+          "lastHalfCV": 0.050006399276844686
+        },
+        "attemptMeanPerRequestNs": 255264.99162500002
+      },
+      {
+        "attempt": 4,
+        "iterations": 16000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 352031043.8,
+          "lastHalfMeanNs": 356709063.4,
+          "relativeChange": 0.013288656447746964,
+          "lastHalfCV": 0.04636574462420352
+        },
+        "attemptMeanPerRequestNs": 221481.28350000002
+      },
+      {
+        "attempt": 5,
+        "iterations": 32000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 708463762.8,
+          "lastHalfMeanNs": 756966091.8,
+          "relativeChange": 0.06846127007019871,
+          "lastHalfCV": 0.05283082834734669
+        },
+        "attemptMeanPerRequestNs": 228973.41478124997
+      }
+    ],
+    "totalNs": 2578114541,
+    "throughputPerSec": 3878.803614412413,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-keepalive-run07",
+    "runtime": "node",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 11.565927982330322,
+    "server_cpu_percent_during_run": 39.3,
+    "connection_verification": {
+      "client_connections_opened": 2,
+      "keepalive_requests_delta": 41000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 16000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 94147601.2,
+          "lastHalfMeanNs": 60935441.2,
+          "relativeChange": -0.3527669274275678,
+          "lastHalfCV": 0.1371607672803841
+        },
+        "attemptMeanPerRequestNs": 775415.212
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 111841508,
+          "lastHalfMeanNs": 90539160.6,
+          "relativeChange": -0.19046906449079715,
+          "lastHalfCV": 0.2254252413404066
+        },
+        "attemptMeanPerRequestNs": 505951.6715
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 151334353.6,
+          "lastHalfMeanNs": 108561037,
+          "relativeChange": -0.2826411557091423,
+          "lastHalfCV": 0.13818125424012975
+        },
+        "attemptMeanPerRequestNs": 324869.23825
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 182745248,
+          "lastHalfMeanNs": 203264742.4,
+          "relativeChange": 0.11228469481187278,
+          "lastHalfCV": 0.16340710780478857
+        },
+        "attemptMeanPerRequestNs": 241256.24399999998
+      },
+      {
+        "attempt": 4,
+        "iterations": 16000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 405801385.8,
+          "lastHalfMeanNs": 389786016.2,
+          "relativeChange": -0.039466029837298855,
+          "lastHalfCV": 0.06056415742299565
+        },
+        "attemptMeanPerRequestNs": 248621.063125
+      }
+    ],
+    "totalNs": 2532448957,
+    "throughputPerSec": 3948.7469124930517,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-keepalive-run08",
+    "runtime": "node",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 11.019588708877563,
+    "server_cpu_percent_during_run": 40.3,
+    "connection_verification": {
+      "client_connections_opened": 2,
+      "keepalive_requests_delta": 41000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 16000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 85042267,
+          "lastHalfMeanNs": 62469661.6,
+          "relativeChange": -0.26542807707607324,
+          "lastHalfCV": 0.0789532796424633
+        },
+        "attemptMeanPerRequestNs": 737559.6429999999
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 104509276.8,
+          "lastHalfMeanNs": 85253840.8,
+          "relativeChange": -0.184246189329673,
+          "lastHalfCV": 0.16890409212415244
+        },
+        "attemptMeanPerRequestNs": 474407.794
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 152099042,
+          "lastHalfMeanNs": 102161126.4,
+          "relativeChange": -0.3283249844532222,
+          "lastHalfCV": 0.1073643737183685
+        },
+        "attemptMeanPerRequestNs": 317825.2105
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 185898154.2,
+          "lastHalfMeanNs": 202418446.8,
+          "relativeChange": 0.08886743750143176,
+          "lastHalfCV": 0.041581518848785436
+        },
+        "attemptMeanPerRequestNs": 242697.875625
+      },
+      {
+        "attempt": 4,
+        "iterations": 16000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 396948326.2,
+          "lastHalfMeanNs": 354103626.6,
+          "relativeChange": -0.10793520660523688,
+          "lastHalfCV": 0.07389608698125075
+        },
+        "attemptMeanPerRequestNs": 234703.73525
+      }
+    ],
+    "totalNs": 2328399311,
+    "throughputPerSec": 4294.7959796918185,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-keepalive-run09",
+    "runtime": "node",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 11.49078106880188,
+    "server_cpu_percent_during_run": 39.8,
+    "connection_verification": {
+      "client_connections_opened": 2,
+      "keepalive_requests_delta": 41000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 16000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 86836417,
+          "lastHalfMeanNs": 60220360.6,
+          "relativeChange": -0.3065079988272662,
+          "lastHalfCV": 0.13155246474829124
+        },
+        "attemptMeanPerRequestNs": 735283.8879999999
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 113925142.8,
+          "lastHalfMeanNs": 120459155.4,
+          "relativeChange": 0.05735356076288376,
+          "lastHalfCV": 0.08343613231907938
+        },
+        "attemptMeanPerRequestNs": 585960.7455
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 148900626.6,
+          "lastHalfMeanNs": 126950834.2,
+          "relativeChange": -0.14741235749776216,
+          "lastHalfCV": 0.2493648526260791
+        },
+        "attemptMeanPerRequestNs": 344814.326
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 197180096.4,
+          "lastHalfMeanNs": 185516453.4,
+          "relativeChange": -0.059152232973550774,
+          "lastHalfCV": 0.04466536682459902
+        },
+        "attemptMeanPerRequestNs": 239185.343625
+      },
+      {
+        "attempt": 4,
+        "iterations": 16000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 384434689,
+          "lastHalfMeanNs": 370458059.2,
+          "relativeChange": -0.03635631799085647,
+          "lastHalfCV": 0.03089923625745961
+        },
+        "attemptMeanPerRequestNs": 235903.98381250002
+      }
+    ],
+    "totalNs": 2479576957,
+    "throughputPerSec": 4032.946011927308,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "node-keepalive-run10",
+    "runtime": "node",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 10.986220598220825,
+    "server_cpu_percent_during_run": 40.1,
+    "connection_verification": {
+      "client_connections_opened": 2,
+      "keepalive_requests_delta": 41000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 16000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 88574379.8,
+          "lastHalfMeanNs": 60009275.4,
+          "relativeChange": -0.3224984974718389,
+          "lastHalfCV": 0.05848163517686419
+        },
+        "attemptMeanPerRequestNs": 742918.276
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 100686071,
+          "lastHalfMeanNs": 81516022,
+          "relativeChange": -0.19039425026327625,
+          "lastHalfCV": 0.13276700491632432
+        },
+        "attemptMeanPerRequestNs": 455505.2325
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 140312216.6,
+          "lastHalfMeanNs": 101720208.8,
+          "relativeChange": -0.2750438182444051,
+          "lastHalfCV": 0.1210976450038842
+        },
+        "attemptMeanPerRequestNs": 302540.53175
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 195249897.8,
+          "lastHalfMeanNs": 188085291.4,
+          "relativeChange": -0.03669454622372666,
+          "lastHalfCV": 0.07281937506175395
+        },
+        "attemptMeanPerRequestNs": 239584.49325
+      },
+      {
+        "attempt": 4,
+        "iterations": 16000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 356069808.6,
+          "lastHalfMeanNs": 364214188.6,
+          "relativeChange": 0.02287298671016838,
+          "lastHalfCV": 0.09576733200546472
+        },
+        "attemptMeanPerRequestNs": 225088.749125
+      }
+    ],
+    "totalNs": 2560716604,
+    "throughputPerSec": 3905.1568550691522,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "node v22.22.2"
+  },
+  {
+    "run_id": "deno-keepalive-run01",
+    "runtime": "deno",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 3.34285831451416,
+    "server_cpu_percent_during_run": 50.9,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 28851746.8,
+          "lastHalfMeanNs": 20136623.8,
+          "relativeChange": -0.3020656967639824,
+          "lastHalfCV": 0.24321127488962052
+        },
+        "attemptMeanPerRequestNs": 244941.853
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 39853343.2,
+          "lastHalfMeanNs": 40683925,
+          "relativeChange": 0.020840956700465645,
+          "lastHalfCV": 0.09189302388218212
+        },
+        "attemptMeanPerRequestNs": 201343.1705
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 76679379.4,
+          "lastHalfMeanNs": 77227456.6,
+          "relativeChange": 0.007147647832945137,
+          "lastHalfCV": 0.04927184062392957
+        },
+        "attemptMeanPerRequestNs": 192383.545
+      }
+    ],
+    "totalNs": 1883928168,
+    "throughputPerSec": 5308.058008717029,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-keepalive-run02",
+    "runtime": "deno",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 4.544920921325684,
+    "server_cpu_percent_during_run": 53.7,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 25000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 8000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 27688144.8,
+          "lastHalfMeanNs": 19620703.6,
+          "relativeChange": -0.29136806594568226,
+          "lastHalfCV": 0.09604302894698225
+        },
+        "attemptMeanPerRequestNs": 236544.242
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 44402946.6,
+          "lastHalfMeanNs": 36428730.6,
+          "relativeChange": -0.17958754115655917,
+          "lastHalfCV": 0.08278627412672035
+        },
+        "attemptMeanPerRequestNs": 202079.193
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 76584342.4,
+          "lastHalfMeanNs": 71062980.4,
+          "relativeChange": -0.07209518064622045,
+          "lastHalfCV": 0.05347978048764931
+        },
+        "attemptMeanPerRequestNs": 184559.15350000001
+      },
+      {
+        "attempt": 3,
+        "iterations": 8000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 139476689.6,
+          "lastHalfMeanNs": 130092945.8,
+          "relativeChange": -0.06727822281207911,
+          "lastHalfCV": 0.0339997893326172
+        },
+        "attemptMeanPerRequestNs": 168481.022125
+      }
+    ],
+    "totalNs": 1772001592,
+    "throughputPerSec": 5643.335787702836,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-keepalive-run03",
+    "runtime": "deno",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 3.101749897003174,
+    "server_cpu_percent_during_run": 50.6,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 26773948.4,
+          "lastHalfMeanNs": 18276430.8,
+          "relativeChange": -0.31738006935129515,
+          "lastHalfCV": 0.2007859212584821
+        },
+        "attemptMeanPerRequestNs": 225251.896
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 33610212.8,
+          "lastHalfMeanNs": 34273817,
+          "relativeChange": 0.019744123726583577,
+          "lastHalfCV": 0.10507119346419531
+        },
+        "attemptMeanPerRequestNs": 169710.0745
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 62456934.8,
+          "lastHalfMeanNs": 71185262.8,
+          "relativeChange": 0.1397495414712539,
+          "lastHalfCV": 0.11286336042559263
+        },
+        "attemptMeanPerRequestNs": 167052.747
+      }
+    ],
+    "totalNs": 1824304063,
+    "throughputPerSec": 5481.542360627851,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-keepalive-run04",
+    "runtime": "deno",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 3.0738790035247803,
+    "server_cpu_percent_during_run": 52.1,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 24307496,
+          "lastHalfMeanNs": 18526134.2,
+          "relativeChange": -0.2378427543503453,
+          "lastHalfCV": 0.20951092689717035
+        },
+        "attemptMeanPerRequestNs": 214168.151
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 37515281,
+          "lastHalfMeanNs": 35222020,
+          "relativeChange": -0.06112871712196425,
+          "lastHalfCV": 0.0916033358707281
+        },
+        "attemptMeanPerRequestNs": 181843.2525
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 70381473.2,
+          "lastHalfMeanNs": 64996805.6,
+          "relativeChange": -0.07650688960003187,
+          "lastHalfCV": 0.07312034879816173
+        },
+        "attemptMeanPerRequestNs": 169222.84850000002
+      }
+    ],
+    "totalNs": 1772322201,
+    "throughputPerSec": 5642.314921269781,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-keepalive-run05",
+    "runtime": "deno",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 3.335088014602661,
+    "server_cpu_percent_during_run": 52.2,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 27317515,
+          "lastHalfMeanNs": 22414556.6,
+          "relativeChange": -0.17948039563627946,
+          "lastHalfCV": 0.2337976696107272
+        },
+        "attemptMeanPerRequestNs": 248660.358
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 40126358.4,
+          "lastHalfMeanNs": 39709838.2,
+          "relativeChange": -0.010380214318177339,
+          "lastHalfCV": 0.10745326661428845
+        },
+        "attemptMeanPerRequestNs": 199590.49149999997
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 76860373.2,
+          "lastHalfMeanNs": 76707009.4,
+          "relativeChange": -0.0019953559111783887,
+          "lastHalfCV": 0.07535083970346458
+        },
+        "attemptMeanPerRequestNs": 191959.22825
+      }
+    ],
+    "totalNs": 1879850660,
+    "throughputPerSec": 5319.571502557549,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-keepalive-run06",
+    "runtime": "deno",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 3.357433557510376,
+    "server_cpu_percent_during_run": 50.9,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 26399731.4,
+          "lastHalfMeanNs": 20584580.8,
+          "relativeChange": -0.22027309717249616,
+          "lastHalfCV": 0.18293950541517126
+        },
+        "attemptMeanPerRequestNs": 234921.56100000002
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 36712994.8,
+          "lastHalfMeanNs": 34571324.8,
+          "relativeChange": -0.058335475263380045,
+          "lastHalfCV": 0.058252721745462734
+        },
+        "attemptMeanPerRequestNs": 178210.799
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 69931811.6,
+          "lastHalfMeanNs": 71987835,
+          "relativeChange": 0.029400402377106533,
+          "lastHalfCV": 0.1118354391113394
+        },
+        "attemptMeanPerRequestNs": 177399.55825
+      }
+    ],
+    "totalNs": 1998179642,
+    "throughputPerSec": 5004.555040902574,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-keepalive-run07",
+    "runtime": "deno",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 3.377511501312256,
+    "server_cpu_percent_during_run": 51.2,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 27931524.8,
+          "lastHalfMeanNs": 19513853.8,
+          "relativeChange": -0.30136811578578765,
+          "lastHalfCV": 0.09148363207796768
+        },
+        "attemptMeanPerRequestNs": 237226.893
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 40697589.4,
+          "lastHalfMeanNs": 36638552.4,
+          "relativeChange": -0.09973654606678006,
+          "lastHalfCV": 0.10663007682691752
+        },
+        "attemptMeanPerRequestNs": 193340.3545
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 72607009.6,
+          "lastHalfMeanNs": 78425683.2,
+          "relativeChange": 0.0801392817588236,
+          "lastHalfCV": 0.059494136946041755
+        },
+        "attemptMeanPerRequestNs": 188790.866
+      }
+    ],
+    "totalNs": 1958380379,
+    "throughputPerSec": 5106.260309402333,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-keepalive-run08",
+    "runtime": "deno",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 3.381803035736084,
+    "server_cpu_percent_during_run": 50.9,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 29548335.8,
+          "lastHalfMeanNs": 24739575.2,
+          "relativeChange": -0.16274218055962397,
+          "lastHalfCV": 0.07991015468013657
+        },
+        "attemptMeanPerRequestNs": 271439.555
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 40331349.2,
+          "lastHalfMeanNs": 41641575.6,
+          "relativeChange": 0.03248655018959788,
+          "lastHalfCV": 0.11196093176124687
+        },
+        "attemptMeanPerRequestNs": 204932.312
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 83169332,
+          "lastHalfMeanNs": 74635521,
+          "relativeChange": -0.10260766552748073,
+          "lastHalfCV": 0.055755914784569933
+        },
+        "attemptMeanPerRequestNs": 197256.06625
+      }
+    ],
+    "totalNs": 1866784728,
+    "throughputPerSec": 5356.804054591558,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-keepalive-run09",
+    "runtime": "deno",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 3.3367092609405518,
+    "server_cpu_percent_during_run": 50.9,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 24984045.2,
+          "lastHalfMeanNs": 19721866.2,
+          "relativeChange": -0.2106215770054723,
+          "lastHalfCV": 0.13741297627218763
+        },
+        "attemptMeanPerRequestNs": 223529.557
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 37945259,
+          "lastHalfMeanNs": 36544887.6,
+          "relativeChange": -0.03690504260360954,
+          "lastHalfCV": 0.09049879617418277
+        },
+        "attemptMeanPerRequestNs": 186225.36649999997
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 73492796.8,
+          "lastHalfMeanNs": 81997772.4,
+          "relativeChange": 0.11572529513531875,
+          "lastHalfCV": 0.11771585827855834
+        },
+        "attemptMeanPerRequestNs": 194363.21149999998
+      }
+    ],
+    "totalNs": 1923204344,
+    "throughputPerSec": 5199.655476651731,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  },
+  {
+    "run_id": "deno-keepalive-run10",
+    "runtime": "deno",
+    "mode": "keepalive",
+    "timed_count_requested": 10000,
+    "wall_clock_process_s": 3.019805669784546,
+    "server_cpu_percent_during_run": 52.0,
+    "connection_verification": {
+      "client_connections_opened": 1,
+      "keepalive_requests_delta": 17000,
+      "cold_requests_delta": 0
+    },
+    "status": "OK",
+    "timedCount": 10000,
+    "errors": 0,
+    "warmupFinalStatus": "STABLE",
+    "warmupFinalIterations": 4000,
+    "warmupAttempts": [
+      {
+        "attempt": 0,
+        "iterations": 1000,
+        "stabilityCheck": {
+          "stable": false,
+          "firstHalfMeanNs": 24204792.6,
+          "lastHalfMeanNs": 18838171,
+          "relativeChange": -0.22171731395046124,
+          "lastHalfCV": 0.18629219846213832
+        },
+        "attemptMeanPerRequestNs": 215214.818
+      },
+      {
+        "attempt": 1,
+        "iterations": 2000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 35028863.6,
+          "lastHalfMeanNs": 34610490.2,
+          "relativeChange": -0.011943676071752396,
+          "lastHalfCV": 0.09615164341703154
+        },
+        "attemptMeanPerRequestNs": 174098.3845
+      },
+      {
+        "attempt": 2,
+        "iterations": 4000,
+        "stabilityCheck": {
+          "stable": true,
+          "firstHalfMeanNs": 69041508.8,
+          "lastHalfMeanNs": 69129568.2,
+          "relativeChange": 0.0012754559037100007,
+          "lastHalfCV": 0.1298013351477082
+        },
+        "attemptMeanPerRequestNs": 172713.84625
+      }
+    ],
+    "totalNs": 1728423394,
+    "throughputPerSec": 5785.619446435241,
+    "allStatus200": true,
+    "allBodyMatch": true,
+    "allContentLengthMatch": true,
+    "runtimeVersion": "deno 2.9.5"
+  }
+]

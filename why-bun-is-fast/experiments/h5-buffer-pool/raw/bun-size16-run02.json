@@ -1,0 +1,17 @@
+{
+  "run_id": "bun-size16-run02",
+  "runtime": "bun",
+  "runtime_version": "1.3.13",
+  "size": 16,
+  "timed_iterations_requested": 1000000,
+  "started_at_unix": 1786968013.053534,
+  "finished_at_unix": 1786968013.1505244,
+  "wall_clock_process_s": 0.09699034690856934,
+  "status": "OK",
+  "allocsPerSec": 12025354.015900044,
+  "totalNs": 83157635,
+  "iterations_actually_run": 1000000,
+  "acc": 248997248,
+  "peak_rss_kb": 43452,
+  "runtimeVersion_selfReported": "bun 1.3.13"
+}

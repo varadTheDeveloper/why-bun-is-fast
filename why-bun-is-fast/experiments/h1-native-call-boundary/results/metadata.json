@@ -1,0 +1,75 @@
+{
+  "experiment_id": "h1-native-call-boundary",
+  "experiment_name": "H1 - Native JS->Native Call Boundary",
+  "hypothesis_id": "H1",
+  "run_batch_id": "h1-run-2026-08-17",
+  "timestamp_utc_start": "2026-08-17T13:00:00Z",
+  "timestamp_utc_end": "2026-08-17T13:10:00Z",
+
+  "machine": {
+    "anonymized_machine_id": "shared-cloud-sandbox-vm",
+    "dedicated_or_shared": "SHARED — same cloud sandbox used for H2/H3/H4/H5/H6, not dedicated hardware. H1 is explicitly the most noise-sensitive experiment in the Stage 13 set (nanosecond-scale measurements); classified PILOT/LIMITED for this reason alone, per the standing instruction, regardless of data quality.",
+    "container_vm_or_native": "VM (KVM/Firecracker guest)",
+    "load_average_at_run_start": "0.08, 0.06, 0.02 (1/5/15 min) — very low"
+  },
+
+  "hardware": {
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "cpu_cores_physical": 2,
+    "cpu_cores_logical": 2,
+    "ram_total_gb": 7.8,
+    "architecture": "x86_64",
+    "cpu_governor": "not exposed / not controllable in this sandbox"
+  },
+
+  "os": {
+    "name": "Ubuntu",
+    "version": "24.04.4 LTS (Noble Numbat)",
+    "kernel": "6.18.5-fc-v20"
+  },
+
+  "runtime_build_track": {
+    "spec_requested": "Use source-controlled builds if feasible (existing pins: Bun 8326d1bd39a96f1f298c3de195aad15972d4f3b4, Node ad7a5b8302ae54b6e6dc77e03eabc5a3218dfb85).",
+    "actual_track_used": "RELEASE BUILDS for all three runtimes (same fallback already used and disclosed for H3/H4/H5/H6 — the Rust nightly toolchain blocker for building Bun from source, verified in H5, applies unchanged here and was not re-tested).",
+    "bun": {"version": "1.3.13", "binary_path": "bun", "install_method": "release, pre-installed", "git_commit_of_benchmarked_binary": "N/A — release build"},
+    "node": {"version": "v22.22.2", "binary_path": "node", "install_method": "release, pre-installed", "git_commit_of_benchmarked_binary": "N/A — release build"},
+    "deno": {"version": "2.9.5 (stable, release, x86_64-unknown-linux-gnu)", "binary_path": "deno", "install_method": "release binary", "git_commit_of_benchmarked_binary": "N/A — release build; Deno source pin not re-resolved this stage, not needed since Deno is included only as a release-build FFI comparison, not a source-mechanism trace"},
+    "pinned_source_commits_used_for_reference_only": {
+      "bun": "8326d1bd39a96f1f298c3de195aad15972d4f3b4 (repos/bun local clone) — used only to confirm Bun ships a real N-API implementation (src/jsc/bindings/napi.cpp, node_api.h, js_native_api.h) before designing the N-API same-binary control. NOT built, NOT the benchmarked binary."
+    },
+    "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, used to compile both native.c (FFI shared library) and napi_addon.c (N-API addon), -O2 -fPIC -shared for both, identical flags for both compilation units."
+  },
+
+  "equivalence_validation": {
+    "candidate_operation": "int32 in -> native function -> increment -> int32 out (native.c / napi_addon.c both implement exactly `return x + 1;` as the native-side logic; napi_addon.c additionally performs the N-API-mandated argument/return marshaling calls napi_get_value_int32/napi_create_int32, which is inherent to what the N-API mechanism itself is).",
+    "argument_type": "int32 for bun:ffi, Node/Bun N-API, and Deno Fast-API variant. int64 (BigInt) for Deno's deliberate non-fast variant only (documented, not conflated with the i32 rows for magnitude comparison).",
+    "return_type": "Matches argument type per variant (see above).",
+    "native_function_body": "Byte-for-byte identical `return x + 1;` in the FFI shared library (native.c) used by bun:ffi and both Deno variants. The N-API addon (napi_addon.c) implements the same logical operation, with N-API's own required marshaling calls around it — this is the intended object of measurement for the N-API rows (N-API's own overhead is part of what N-API 'is'), not a departure from equivalence.",
+    "js_call_structure": "Identical for-loop / sink=fn(i) pattern across every variant's script (see benchmark/*.js), differing only in the import/setup lines needed for each binding mechanism.",
+    "optimization_barriers": "sink accumulator, printed in the final JSON output (equivalent to Section 6's console.log(sink) requirement) — prevents the loop/call from being eliminated as dead code. Verified: final sink values in every run's raw data are non-zero and consistent with the expected computation, confirming the loop and the native call actually executed the requested iteration count.",
+    "allocation_behavior": "bun:ffi and Deno.dlopen() marshal int32/int64 arguments directly (no heap allocation for primitive numeric FFI calls, consistent with both runtimes' FFI documentation). N-API's napi_create_int32 return-value boxing may or may not allocate depending on each engine's small-integer (SMI-style) tagging — this was NOT independently verified at the engine-internals level this session and is disclosed as an open uncertainty, not asserted as zero-allocation.",
+    "exception_behavior": "None of the four variants throw during normal operation; error paths (e.g. napi_get_value_int32 failing on a non-number argument) are never exercised, since every call always passes a valid int32/int64.",
+    "thread_async_behavior": "All four variants are fully synchronous, single-threaded, same-thread calls — no cross-thread hop (unlike H2's fetch() thread-hop test). Deno's dlopen symbols were declared without `nonblocking: true` (the default, synchronous dispatch), confirmed by reading the symbol definitions in deno-ffi-bench.js.",
+    "conclusion": "True three-way apples-to-apples equivalence (identical binding technology for all three runtimes) was NOT achievable — Node has no built-in dlopen-style FFI without a third-party package, and Deno has no N-API/native-addon compatibility. Per Section 4, this experiment therefore uses: PRIMARY COMPARISON = Bun's own normal binding (bun:ffi) vs Node's own normal/actual binding (N-API addon) — the fairest 'each runtime's real native-call path' comparison. SUPPLEMENTARY SAME-BINARY CONTROL = the identical compiled napi_addon.node loaded by both Bun (via its N-API compat layer) and Node (natively) — the strongest possible equivalence for isolating engine-level differences, at the cost of testing Bun's N-API EMULATION overhead rather than Bun's fastest normal path. DENO = presented separately, explicitly NOT APPLES-TO-APPLES against the N-API rows (different FFI technology), with two internally-comparable sub-variants (fast/non-fast) and a loosely-comparable relationship to bun:ffi as both are dlopen-based FFI systems (though even this is not asserted as fully equivalent, since bun:ffi's and Deno's FFI internal implementations were not independently source-verified against each other this session)."
+  },
+
+  "environment_variables": { "non_default_vars_set": {} },
+
+  "background_workload": {
+    "description": "Shared cloud sandbox; same session-management processes present as in prior experiments (roughly constant, low CPU usage). No HTTP load generator, database, or other benchmark running concurrently.",
+    "other_processes_running": ["session management processes (claude CLI, environment-manager)"]
+  },
+
+  "timer_resolution_note": "Timing uses process.hrtime.bigint() (nanosecond-resolution counter), chunked over 1,000,000 calls per chunk (10 chunks per 10,000,000-call timed run) so the timer call itself (invoked only 20 times per run, not once per native call) is amortized to a negligible fraction of the measured time — satisfying Section 8's 'remove the timer from the result' requirement. Control-mode measurements (pure JS loop, no native call) show notably higher relative variance (CV 25%-37%) than test-mode measurements (CV 3.6%-6.3%) because the ABSOLUTE per-call cost being measured in control mode (~0.45-0.9ns) is extremely close to the practical noise floor of what a chunked, non-hardware-performance-counter timing approach can resolve on shared, non-isolated cores — this is disclosed rather than hidden; the derived 'native-call overhead' figures (test minus control) are still meaningful because the test-mode absolute magnitudes (5-82ns) are far above this noise floor, so the control's relative imprecision contributes only a small fraction of the subtracted overhead's own uncertainty.",
+
+  "runs": {
+    "timed_iterations_per_run": 10000000,
+    "runs_per_combo": 10,
+    "combos": 9,
+    "total_runs": 90,
+    "failed_runs": 0,
+    "fresh_process_per_run": true
+  },
+
+  "notes": "Full raw per-run JSON preserved individually in ../raw/<combo_id>-run<NN>.json (90 files, each including full warmup-attempt history and per-chunk timings), plus ../raw/run_index.json (all 90 entries, summary fields only). Benchmark source (native.c, napi_addon.c, napi-bench.js, bun-ffi-bench.js, deno-ffi-bench.js, orchestrate.py, analyze.py) preserved in ../benchmark/."
+}

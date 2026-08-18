@@ -1,0 +1,43 @@
+{
+  "run_id": "node-cold-run08",
+  "runtime": "node",
+  "mode": "cold",
+  "timed_count_requested": 10,
+  "wall_clock_process_s": 0.5531880855560303,
+  "server_cpu_percent_during_run": 27.1,
+  "connection_verification": {
+    "client_connections_opened": 310,
+    "keepalive_requests_delta": 0,
+    "cold_requests_delta": 310
+  },
+  "status": "OK",
+  "timedCount": 10,
+  "errors": 0,
+  "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+  "warmupFinalIterations": 300,
+  "warmupAttempts": [
+    {
+      "attempt": 0,
+      "iterations": 300,
+      "attemptMeanPerRequestNs": 1697228.0166666666
+    }
+  ],
+  "latenciesNs": [
+    1078081,
+    1764980,
+    1381623,
+    1218642,
+    1429440,
+    1194400,
+    1033155,
+    1434538,
+    1060816,
+    1085193
+  ],
+  "totalNs": 12725829,
+  "throughputPerSec": 785.8034238869625,
+  "allStatus200": true,
+  "allBodyMatch": true,
+  "allContentLengthMatch": true,
+  "runtimeVersion": "node v22.22.2"
+}

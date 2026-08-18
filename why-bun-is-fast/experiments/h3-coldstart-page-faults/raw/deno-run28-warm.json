@@ -1,0 +1,21 @@
+{
+  "run_id": "deno-run28",
+  "runtime": "deno",
+  "state": "warm",
+  "timestamp_unix": 1786969046.7288775,
+  "command": [
+    "deno",
+    "run",
+    "experiments/h3-coldstart-page-faults/benchmark/hello.js"
+  ],
+  "status": "OK",
+  "page_faults": 2600.0,
+  "minor_faults": 2598.0,
+  "major_faults": 0.0,
+  "elapsed_s": 0.014920099,
+  "user_s": 0.004316,
+  "sys_s": 0.012948,
+  "wall_clock_python_s": 0.02130270004272461,
+  "stdout": "hello",
+  "returncode": 0
+}

@@ -1,0 +1,84 @@
+{
+  "experiment_id": "h2-fetch-thread-hop",
+  "experiment_name": "H2 - fetch() Thread-Hop Overhead",
+  "hypothesis_id": "H2",
+  "run_batch_id": "h2-run-2026-08-17",
+  "timestamp_utc_start": "2026-08-17T12:40:00Z",
+  "timestamp_utc_end": "2026-08-17T12:48:00Z",
+
+  "machine": {
+    "anonymized_machine_id": "shared-cloud-sandbox-vm",
+    "dedicated_or_shared": "SHARED — same cloud sandbox used for H3/H4/H5/H6, not dedicated benchmarking hardware. Classified LIMITED/PILOT for this reason per Stage 13's standing instruction for this environment.",
+    "container_vm_or_native": "VM (KVM/Firecracker guest)",
+    "load_average_at_run_start": "0.31, 0.67, 0.36 (1/5/15 min)"
+  },
+
+  "hardware": {
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "cpu_cores_physical": 2,
+    "cpu_cores_logical": 2,
+    "ram_total_gb": 7.8,
+    "architecture": "x86_64"
+  },
+
+  "os": {
+    "name": "Ubuntu",
+    "version": "24.04.4 LTS (Noble Numbat)",
+    "kernel": "6.18.5-fc-v20"
+  },
+
+  "runtime_build_track": {
+    "note": "This experiment is a client-side comparison only (server is a fixed, non-runtime Python implementation — see 'server_configuration'). Release builds used for all three client runtimes, as specified by the H2 kickoff instruction itself (Section 8: 'Primary track: Release builds, consistent across all three runtimes... Do not imply this experiment uses source-controlled builds').",
+    "bun": {"version": "1.3.13", "binary_path": "bun", "install_method": "release, pre-installed"},
+    "node": {"version": "v22.22.2", "binary_path": "node", "install_method": "release, pre-installed"},
+    "deno": {"version": "2.9.5 (stable, release, x86_64-unknown-linux-gnu)", "binary_path": "deno", "install_method": "release binary, downloaded from denoland/deno GitHub Releases in an earlier stage of this session"}
+  },
+
+  "server_configuration": {
+    "implementation": "Python 3 stdlib http.server (ThreadingHTTPServer + BaseHTTPRequestHandler), NOT implemented in any of the three tested runtimes — this is deliberate, per Stage 12 Section 14's rule that the client must never become a hidden variable by also swapping the server implementation.",
+    "bind_address": "127.0.0.1 (IPv4 explicit — no DNS, no dual-stack ambiguity)",
+    "port": 8765,
+    "http_version": "HTTP/1.1",
+    "routes": {
+      "/": "fixed 11-byte JSON body {\"ok\":true}, default HTTP/1.1 persistent connection (keep-alive) — used for the KEEP-ALIVE phase",
+      "/cold": "identical body, but server sends `Connection: close`, forcing the client to close and re-establish a fresh TCP connection for its next request (standard HTTP/1.1 protocol semantics, not a client-side hack) — used for the COLD phase",
+      "/stats": "returns live connection/request counters for verification; querying it itself opens one connection but does not increment the request counters",
+      "/reset (POST)": "resets counters at phase boundaries"
+    },
+    "tcp_nodelay": "Explicitly set on every accepted server socket (socket.IPPROTO_TCP / TCP_NODELAY). DISCLOSED FIX: smoke-testing before the official run found latencies with large (tens-of-ms), alternating spikes consistent with a classic Nagle's-algorithm/delayed-ACK interaction on small HTTP request/response packets. Setting TCP_NODELAY on the server socket (a setting applied identically for all three client comparisons, since it's server-side) resolved the large spikes for Bun and Deno; see 'client_warmup_methodology' for the remaining Node-specific finding.",
+    "single_server_instance": "One server process was started once and used for the smoke test plus the entire cold and keep-alive phases for all three runtimes — literally the same running process, not just the same implementation, satisfying the 'identical server for every client comparison' requirement as strictly as possible."
+  },
+
+  "client_warmup_methodology": {
+    "finding": "A fixed, small, equal warmup count across runtimes was NOT sufficient. Smoke-testing (after fixing TCP_NODELAY) found Node's fetch (undici) needed roughly 8,000-16,000 warmup requests on a persistent connection before its per-request keep-alive latency stabilized — Bun stabilized around 2,000-4,000, Deno around 4,000-8,000. Using a small equal warmup budget would have made Node look far slower than its true steady-state behavior, for a warmup-insufficiency reason unrelated to M9.",
+    "fix": "Keep-alive mode uses a chunked, predefined warmup-stability check (same style as H5's), extended (bounded, up to 128,000 iterations) until stable, REQUIRING TWO CONSECUTIVE PASSING ATTEMPTS (not just one) before declaring STABLE — a single-attempt check was found to be fooled by an intermediate JIT-tiering plateau in Node's fetch specifically (looked flat around 1,000-4,000 iterations at an elevated latency, but kept improving further). This design was finalized BEFORE the official 10-run data collection for each runtime and was not modified afterward. The exact warmup iteration count used is recorded per run (see raw data) and varied naturally by runtime as a result of this process (Bun: 2,000-4,000; Deno: 4,000-8,000; Node: 16,000-32,000) — not tuned to favor any runtime.",
+    "cold_mode_warmup": "A SEPARATE, fixed 300-request warmup (no stability-seeking loop) is used for cold mode. DISCLOSED FIX: applying the same escalating stability-check algorithm to cold mode during smoke-testing caused runaway warmup (one run reached thousands of connections before the smoke test was stopped), because cold connection-establishment overhead is inherently noisy on every single request (that's the definition of 'cold') and does not converge to a tight steady state the way a persistent-connection measurement does. This is a design distinction (connection warmup does not apply to cold mode by definition — only JIT/process warmup does, which converges much faster), decided before the official run based on this smoke-test finding, not tuned afterward to produce a particular result."
+  },
+
+  "environment_variables": { "non_default_vars_set": {} },
+
+  "background_workload": {
+    "description": "Shared cloud sandbox; server, client, and orchestrator all run on the SAME 2-core machine (loopback only) — the same limitation documented for H4/H6. Session-management processes present as in prior experiments.",
+    "load_generator_placement": "N/A — no separate load-generator tool was used; the client script itself issues sequential (concurrency=1) requests and times them directly via process.hrtime.bigint(), which is the cleanest available isolation of per-request dispatch overhead per Section 14."
+  },
+
+  "cpu_monitoring": {
+    "method": "psutil 7.2.2, server-process cpu_percent() sampled once per client-process run (before/after, not continuously sampled mid-run) via cpu_percent(interval=None) primed before the run and read after.",
+    "results_summary": "Server CPU% stayed well below saturation in every combo (max observed: ~68.6% for a bun-cold run; node-keepalive ~40%; see summary.json per_combo_summary[*].server_cpu_percent_during_run). This is consistent with the server never becoming the bottleneck — server load tracked client request rate (higher for faster clients, lower for Node, exactly as expected if the CLIENT is the pacing factor), not an independent confound."
+  },
+
+  "runs": {
+    "smoke_test": "5 keep-alive + 5 cold requests per runtime, run first; verified status 200, exact body match, exact Content-Length match, and connection-reuse behavior (keep-alive: <5 connections opened; cold: connections opened within 2%% of expected warmup+timed request count) for all three runtimes before proceeding. PASSED for all three on the first attempt after the TCP_NODELAY and warmup-methodology fixes described above.",
+    "cold_runs_per_runtime": 10,
+    "cold_timed_requests_per_run": 10,
+    "cold_total_timed_samples_per_runtime": 100,
+    "keepalive_runs_per_runtime": 10,
+    "keepalive_timed_requests_per_run": 10000,
+    "keepalive_total_timed_samples_per_runtime": 100000,
+    "total_runs": 60,
+    "failed_runs": 0,
+    "fresh_process_per_run": true
+  },
+
+  "notes": "Full raw per-run JSON preserved individually in ../raw/<runtime>-<mode>-run<NN>.json (60 files, each containing its full latenciesNs array), plus ../raw/run_index.json (summary metadata for all 60 runs, latency arrays omitted from the index to keep it small) and ../raw/smoke_test_results.json. Benchmark source (server.py, fetch-bench.js, orchestrate.py, analyze.py) preserved in ../benchmark/."
+}

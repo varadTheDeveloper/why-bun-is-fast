@@ -1,0 +1,24 @@
+{
+  "run_id": "bun-run15",
+  "runtime": "bun",
+  "state": "cold",
+  "timestamp_unix": 1786969036.734573,
+  "command": [
+    "bun",
+    "experiments/h3-coldstart-page-faults/benchmark/hello.js"
+  ],
+  "cache_drop_write_ok": true,
+  "cached_kb_before_drop": 421632,
+  "cached_kb_after_drop": 304108,
+  "cached_kb_dropped": 117524,
+  "status": "OK",
+  "page_faults": 1561.0,
+  "minor_faults": 1534.0,
+  "major_faults": 27.0,
+  "elapsed_s": 0.052644221,
+  "user_s": 0.00711,
+  "sys_s": 0.014216,
+  "wall_clock_python_s": 0.08194613456726074,
+  "stdout": "hello",
+  "returncode": 0
+}

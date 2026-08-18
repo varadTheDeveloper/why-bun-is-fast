@@ -1,0 +1,43 @@
+{
+  "run_id": "bun-cold-run03",
+  "runtime": "bun",
+  "mode": "cold",
+  "timed_count_requested": 10,
+  "wall_clock_process_s": 0.155029296875,
+  "server_cpu_percent_during_run": 64.5,
+  "connection_verification": {
+    "client_connections_opened": 310,
+    "keepalive_requests_delta": 0,
+    "cold_requests_delta": 310
+  },
+  "status": "OK",
+  "timedCount": 10,
+  "errors": 0,
+  "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+  "warmupFinalIterations": 300,
+  "warmupAttempts": [
+    {
+      "attempt": 0,
+      "iterations": 300,
+      "attemptMeanPerRequestNs": 461017.60333333333
+    }
+  ],
+  "latenciesNs": [
+    458691,
+    521775,
+    455467,
+    379307,
+    337917,
+    354071,
+    321357,
+    412607,
+    362975,
+    496189
+  ],
+  "totalNs": 4151029,
+  "throughputPerSec": 2409.0412280906735,
+  "allStatus200": true,
+  "allBodyMatch": true,
+  "allContentLengthMatch": true,
+  "runtimeVersion": "bun 1.3.13"
+}

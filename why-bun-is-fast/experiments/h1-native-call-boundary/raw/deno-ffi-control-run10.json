@@ -1,0 +1,91 @@
+{
+  "run_id": "deno-ffi-control-run10",
+  "status": "OK",
+  "wall_clock_process_s": 0.049742937088012695,
+  "mode": "control",
+  "iterations": 10000000,
+  "numChunks": 10,
+  "perChunk": 1000000,
+  "chunkTimingsNs": [
+    1934979,
+    581931,
+    588321,
+    598169,
+    583765,
+    611927,
+    576770,
+    584168,
+    589435,
+    585459
+  ],
+  "totalNs": 7234924,
+  "nsPerCall": 0.7234924,
+  "callsPerSec": 1382184526.057219,
+  "warmupFinalStatus": "STABLE",
+  "warmupFinalIterations": 1600000,
+  "warmupAttempts": [
+    {
+      "attempt": 0,
+      "iterations": 100000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 137611.8,
+        "lastHalfMeanNs": 26109,
+        "relativeChange": -0.8102706308615976,
+        "lastHalfCV": 0.20669741157282892
+      },
+      "attemptMeanPerCallNs": 8.18604
+    },
+    {
+      "attempt": 1,
+      "iterations": 200000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 53679,
+        "lastHalfMeanNs": 41762.8,
+        "relativeChange": -0.22198997745859642,
+        "lastHalfCV": 0.1199637769378267
+      },
+      "attemptMeanPerCallNs": 2.386045
+    },
+    {
+      "attempt": 2,
+      "iterations": 400000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 82309.2,
+        "lastHalfMeanNs": 87579.8,
+        "relativeChange": 0.06403415414072797,
+        "lastHalfCV": 0.26729726124963327
+      },
+      "attemptMeanPerCallNs": 2.1236125
+    },
+    {
+      "attempt": 3,
+      "iterations": 800000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 160103,
+        "lastHalfMeanNs": 151874.6,
+        "relativeChange": -0.05139441484544321,
+        "lastHalfCV": 0.05612101723414628
+      },
+      "attemptMeanPerCallNs": 1.94986
+    },
+    {
+      "attempt": 4,
+      "iterations": 1600000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 320957.8,
+        "lastHalfMeanNs": 314537.8,
+        "relativeChange": -0.020002629629191127,
+        "lastHalfCV": 0.06164875024002243
+      },
+      "attemptMeanPerCallNs": 1.98592375
+    }
+  ],
+  "sink": 1000000,
+  "runtimeVersion": "deno 2.9.5",
+  "combo_id": "deno-ffi-control"
+}

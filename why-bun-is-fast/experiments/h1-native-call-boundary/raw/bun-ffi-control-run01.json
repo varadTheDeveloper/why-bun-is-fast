@@ -1,0 +1,91 @@
+{
+  "run_id": "bun-ffi-control-run01",
+  "status": "OK",
+  "wall_clock_process_s": 0.021136760711669922,
+  "mode": "control",
+  "iterations": 10000000,
+  "numChunks": 10,
+  "perChunk": 1000000,
+  "chunkTimingsNs": [
+    344541,
+    349034,
+    360328,
+    371221,
+    368710,
+    371133,
+    431606,
+    364145,
+    379231,
+    408278
+  ],
+  "totalNs": 3748227,
+  "nsPerCall": 0.3748227,
+  "callsPerSec": 2667928063.054879,
+  "warmupFinalStatus": "STABLE",
+  "warmupFinalIterations": 1600000,
+  "warmupAttempts": [
+    {
+      "attempt": 0,
+      "iterations": 100000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 143422.6,
+        "lastHalfMeanNs": 33219.2,
+        "relativeChange": -0.7683823888285389,
+        "lastHalfCV": 0.2564504522843778
+      },
+      "attemptMeanPerCallNs": 8.832089999999999
+    },
+    {
+      "attempt": 1,
+      "iterations": 200000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 47700.6,
+        "lastHalfMeanNs": 41625,
+        "relativeChange": -0.1273694670507289,
+        "lastHalfCV": 0.5461173120942234
+      },
+      "attemptMeanPerCallNs": 2.23314
+    },
+    {
+      "attempt": 2,
+      "iterations": 400000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 44659.6,
+        "lastHalfMeanNs": 37408.4,
+        "relativeChange": -0.1623659862605128,
+        "lastHalfCV": 0.01131446913517712
+      },
+      "attemptMeanPerCallNs": 1.02585
+    },
+    {
+      "attempt": 3,
+      "iterations": 800000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 81329.8,
+        "lastHalfMeanNs": 89794.4,
+        "relativeChange": 0.10407747221805526,
+        "lastHalfCV": 0.20873775062546254
+      },
+      "attemptMeanPerCallNs": 1.06952625
+    },
+    {
+      "attempt": 4,
+      "iterations": 1600000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 170602.6,
+        "lastHalfMeanNs": 153165.2,
+        "relativeChange": -0.1022106345389812,
+        "lastHalfCV": 0.0590025634856405
+      },
+      "attemptMeanPerCallNs": 1.011774375
+    }
+  ],
+  "sink": 1000000,
+  "runtimeVersion": "bun 1.3.13",
+  "combo_id": "bun-ffi-control"
+}

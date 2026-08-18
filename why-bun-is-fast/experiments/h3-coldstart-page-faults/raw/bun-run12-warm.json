@@ -1,0 +1,20 @@
+{
+  "run_id": "bun-run12",
+  "runtime": "bun",
+  "state": "warm",
+  "timestamp_unix": 1786969036.4340222,
+  "command": [
+    "bun",
+    "experiments/h3-coldstart-page-faults/benchmark/hello.js"
+  ],
+  "status": "OK",
+  "page_faults": 1558.0,
+  "minor_faults": 1558.0,
+  "major_faults": 0.0,
+  "elapsed_s": 0.009494681,
+  "user_s": 0.003311,
+  "sys_s": 0.006622,
+  "wall_clock_python_s": 0.015714645385742188,
+  "stdout": "hello",
+  "returncode": 0
+}

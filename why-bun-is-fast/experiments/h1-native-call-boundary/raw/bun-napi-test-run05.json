@@ -1,0 +1,79 @@
+{
+  "run_id": "bun-napi-test-run05",
+  "status": "OK",
+  "wall_clock_process_s": 0.9852206707000732,
+  "mode": "test",
+  "iterations": 10000000,
+  "numChunks": 10,
+  "perChunk": 1000000,
+  "chunkTimingsNs": [
+    79812066,
+    81160594,
+    87203019,
+    84299914,
+    87472192,
+    78040342,
+    83502380,
+    92760232,
+    88066595,
+    78183143
+  ],
+  "totalNs": 840500477,
+  "nsPerCall": 84.0500477,
+  "callsPerSec": 11897673.200249713,
+  "warmupFinalStatus": "STABLE",
+  "warmupFinalIterations": 800000,
+  "warmupAttempts": [
+    {
+      "attempt": 0,
+      "iterations": 100000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 1361564.4,
+        "lastHalfMeanNs": 929646,
+        "relativeChange": -0.3172221600388494,
+        "lastHalfCV": 0.06306900820643452
+      },
+      "attemptMeanPerCallNs": 114.56052
+    },
+    {
+      "attempt": 1,
+      "iterations": 200000,
+      "stabilityCheck": {
+        "stable": false,
+        "firstHalfMeanNs": 2264344.2,
+        "lastHalfMeanNs": 1702209.4,
+        "relativeChange": -0.24825501352665386,
+        "lastHalfCV": 0.18662359992801228
+      },
+      "attemptMeanPerCallNs": 99.16384000000001
+    },
+    {
+      "attempt": 2,
+      "iterations": 400000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 3535380.8,
+        "lastHalfMeanNs": 3234123.4,
+        "relativeChange": -0.0852121502724685,
+        "lastHalfCV": 0.033995165817850545
+      },
+      "attemptMeanPerCallNs": 84.6188025
+    },
+    {
+      "attempt": 3,
+      "iterations": 800000,
+      "stabilityCheck": {
+        "stable": true,
+        "firstHalfMeanNs": 6470571.8,
+        "lastHalfMeanNs": 6363012.2,
+        "relativeChange": -0.01662288949486653,
+        "lastHalfCV": 0.034937547000221184
+      },
+      "attemptMeanPerCallNs": 80.2099
+    }
+  ],
+  "sink": 1000000,
+  "runtimeVersion": "bun 1.3.13",
+  "combo_id": "bun-napi-test"
+}

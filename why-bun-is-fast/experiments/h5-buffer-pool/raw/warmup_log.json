@@ -1,0 +1,1316 @@
+{
+  "bun-16": {
+    "final_status": "UNSTABLE_AFTER_MAX_EXTENSIONS",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 6204005.057504923,
+        "peak_rss_kb": 38344,
+        "chunkTimingsNs": [
+          1940286,
+          1119689,
+          1191357,
+          868359,
+          135736,
+          950405,
+          866992,
+          136193,
+          148205,
+          702088
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 1051085.4,
+          "last_half_mean_ns": 560776.6,
+          "relative_change": -0.4664785563570762,
+          "last_half_cv": 0.6998135262910371,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 10586487.153721299,
+        "peak_rss_kb": 38984,
+        "chunkTimingsNs": [
+          1759459,
+          1708731,
+          604428,
+          1000577,
+          863972,
+          280542,
+          997122,
+          305164,
+          908388,
+          1017621
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 1187433.4,
+          "last_half_mean_ns": 701767.4,
+          "relative_change": -0.4090048334500275,
+          "last_half_cv": 0.5352739269927558,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 11520244.9296234,
+        "peak_rss_kb": 39752,
+        "chunkTimingsNs": [
+          4056540,
+          1303185,
+          1128986,
+          1163127,
+          1795857,
+          1534432,
+          1622565,
+          1483567,
+          1590017,
+          1682466
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 1889539,
+          "last_half_mean_ns": 1582609.4,
+          "relative_change": -0.16243623444660316,
+          "last_half_cv": 0.04869188779497564,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 3,
+        "iterations": 400000,
+        "status": "OK",
+        "allocsPerSec": 10294319.74877742,
+        "peak_rss_kb": 42924,
+        "chunkTimingsNs": [
+          4299683,
+          2328172,
+          3570391,
+          3283978,
+          3331099,
+          4557100,
+          4361621,
+          4163130,
+          4633453,
+          4327753
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 3362664.6,
+          "last_half_mean_ns": 4408611.4,
+          "relative_change": 0.311047019081237,
+          "last_half_cv": 0.04267907535204317,
+          "reason": "exceeded drift or noise threshold"
+        }
+      }
+    ],
+    "final_iterations": 400000
+  },
+  "bun-64": {
+    "final_status": "STABLE",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 6889857.633493748,
+        "peak_rss_kb": 38856,
+        "chunkTimingsNs": [
+          1325837,
+          1288454,
+          406736,
+          833841,
+          214698,
+          947986,
+          129921,
+          665717,
+          831731,
+          612123
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 813913.2,
+          "last_half_mean_ns": 637495.6,
+          "relative_change": -0.21675235147924862,
+          "last_half_cv": 0.4918149254970339,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 9716989.758195626,
+        "peak_rss_kb": 38708,
+        "chunkTimingsNs": [
+          2211464,
+          1124655,
+          1048408,
+          719757,
+          1290850,
+          798521,
+          680017,
+          1073576,
+          680015,
+          663990
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 1279026.8,
+          "last_half_mean_ns": 779223.8,
+          "relative_change": -0.39076819969683196,
+          "last_half_cv": 0.2222593595730051,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 9881490.298698677,
+        "peak_rss_kb": 39464,
+        "chunkTimingsNs": [
+          3463802,
+          1797377,
+          1849962,
+          1994438,
+          1494953,
+          1957397,
+          1804155,
+          1907603,
+          2246017,
+          1724158
+        ],
+        "stability_check": {
+          "stable": true,
+          "first_half_mean_ns": 2120106.4,
+          "last_half_mean_ns": 1927866,
+          "relative_change": -0.09067488310964011,
+          "last_half_cv": 0.10351579491223385,
+          "reason": "within thresholds"
+        }
+      }
+    ],
+    "final_iterations": 200000
+  },
+  "bun-256": {
+    "final_status": "UNSTABLE_AFTER_MAX_EXTENSIONS",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 4554416.394805961,
+        "peak_rss_kb": 40848,
+        "chunkTimingsNs": [
+          2395067,
+          1551398,
+          1238877,
+          1072347,
+          694891,
+          889726,
+          838855,
+          1022039,
+          562241,
+          712914
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 1390516,
+          "last_half_mean_ns": 805155,
+          "relative_change": -0.4209667490341715,
+          "last_half_cv": 0.21765284615855462,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 6537426.965500298,
+        "peak_rss_kb": 40904,
+        "chunkTimingsNs": [
+          3496955,
+          2060973,
+          1232545,
+          1288978,
+          1226915,
+          1285170,
+          1231153,
+          677630,
+          1423719,
+          1372500
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 1861273.2,
+          "last_half_mean_ns": 1198034.4,
+          "relative_change": -0.35633608220437496,
+          "last_half_cv": 0.25071672911185283,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 6077217.120736072,
+        "peak_rss_kb": 43180,
+        "chunkTimingsNs": [
+          6096193,
+          2690953,
+          2654056,
+          1969067,
+          2847015,
+          2612504,
+          6243413,
+          2671826,
+          2694014,
+          2430759
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 3251456.8,
+          "last_half_mean_ns": 3330503.2,
+          "relative_change": 0.024311071886300436,
+          "last_half_cv": 0.48990987851998247,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 3,
+        "iterations": 400000,
+        "status": "OK",
+        "allocsPerSec": 5962059.450944107,
+        "peak_rss_kb": 44716,
+        "chunkTimingsNs": [
+          9367310,
+          4569985,
+          4868433,
+          5234235,
+          6187851,
+          5644991,
+          5412160,
+          4795733,
+          6474939,
+          14535274
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 6045562.8,
+          "last_half_mean_ns": 7372619.4,
+          "relative_change": 0.21950919110459005,
+          "last_half_cv": 0.5491954458787729,
+          "reason": "exceeded drift or noise threshold"
+        }
+      }
+    ],
+    "final_iterations": 400000
+  },
+  "bun-1024": {
+    "final_status": "STABLE",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 2150348.0338292755,
+        "peak_rss_kb": 50504,
+        "chunkTimingsNs": [
+          5093589,
+          3155209,
+          4205602,
+          1281451,
+          2002500,
+          1371767,
+          1639943,
+          1235926,
+          1856974,
+          1409089
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 3147670.2,
+          "last_half_mean_ns": 1502739.8,
+          "relative_change": -0.5225866420185953,
+          "last_half_cv": 0.16348327206370308,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 2846363.9209482763,
+        "peak_rss_kb": 50504,
+        "chunkTimingsNs": [
+          8072664,
+          4844671,
+          2528980,
+          2677184,
+          3246182,
+          2827742,
+          2534259,
+          3116105,
+          2658333,
+          2626422
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 4273936.2,
+          "last_half_mean_ns": 2752572.2,
+          "relative_change": -0.35596319851475555,
+          "last_half_cv": 0.08329363855311031,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 2850726.5233334675,
+        "peak_rss_kb": 54156,
+        "chunkTimingsNs": [
+          14178884,
+          5059041,
+          6395827,
+          5440443,
+          5793432,
+          6236645,
+          5937690,
+          5929268,
+          7568926,
+          7617398
+        ],
+        "stability_check": {
+          "stable": true,
+          "first_half_mean_ns": 7373525.4,
+          "last_half_mean_ns": 6657985.4,
+          "relative_change": -0.09704177597326781,
+          "last_half_cv": 0.12958814421954218,
+          "reason": "within thresholds"
+        }
+      }
+    ],
+    "final_iterations": 200000
+  },
+  "bun-4096": {
+    "final_status": "UNSTABLE_AFTER_MAX_EXTENSIONS",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 949038.0427024222,
+        "peak_rss_kb": 87368,
+        "chunkTimingsNs": [
+          15110271,
+          11077060,
+          11646754,
+          1917122,
+          2312098,
+          2861378,
+          1939500,
+          2153657,
+          1976584,
+          1690503
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 8412661,
+          "last_half_mean_ns": 2124324.4,
+          "relative_change": -0.7474848445693937,
+          "last_half_cv": 0.20897484982728892,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 1634401.6441688284,
+        "peak_rss_kb": 87484,
+        "chunkTimingsNs": [
+          23096947,
+          10240429,
+          4438216,
+          3643201,
+          3149640,
+          3610133,
+          3126647,
+          3838665,
+          3053268,
+          2987325
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 8913686.6,
+          "last_half_mean_ns": 3323207.6,
+          "relative_change": -0.6271792189777011,
+          "last_half_cv": 0.11382581159415942,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 2172023.1472506803,
+        "peak_rss_kb": 90884,
+        "chunkTimingsNs": [
+          30945239,
+          7053653,
+          7058252,
+          6591767,
+          6240942,
+          6507346,
+          6837383,
+          7742202,
+          6835126,
+          6268140
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 11577970.6,
+          "last_half_mean_ns": 6838039.4,
+          "relative_change": -0.40939222975743256,
+          "last_half_cv": 0.08180540604228813,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 3,
+        "iterations": 400000,
+        "status": "OK",
+        "allocsPerSec": 2100491.6148112174,
+        "peak_rss_kb": 92700,
+        "chunkTimingsNs": [
+          49817898,
+          20076249,
+          13145655,
+          17274141,
+          14242024,
+          15850737,
+          14641767,
+          14030713,
+          16714918,
+          14637508
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 22911193.4,
+          "last_half_mean_ns": 15175128.6,
+          "relative_change": -0.33765437988926406,
+          "last_half_cv": 0.07151144254658995,
+          "reason": "exceeded drift or noise threshold"
+        }
+      }
+    ],
+    "final_iterations": 400000
+  },
+  "bun-16384": {
+    "final_status": "UNSTABLE_AFTER_MAX_EXTENSIONS",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 706677.0237251264,
+        "peak_rss_kb": 137160,
+        "chunkTimingsNs": [
+          23306128,
+          19957120,
+          7056701,
+          5683216,
+          1938844,
+          2810012,
+          1754764,
+          2412931,
+          3391577,
+          2442387
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 11588401.8,
+          "last_half_mean_ns": 2562334.2,
+          "relative_change": -0.7788880430431745,
+          "last_half_cv": 0.2339879361582329,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 1132801.8883898102,
+        "peak_rss_kb": 137148,
+        "chunkTimingsNs": [
+          42364388,
+          13965618,
+          5127964,
+          3933192,
+          4594264,
+          3556775,
+          4065024,
+          3419899,
+          3812882,
+          3436683
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 13997085.2,
+          "last_half_mean_ns": 3658252.6,
+          "relative_change": -0.7386418280857503,
+          "last_half_cv": 0.07555379039725114,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 1531127.3442593152,
+        "peak_rss_kb": 140984,
+        "chunkTimingsNs": [
+          57397353,
+          8697283,
+          8937730,
+          7724524,
+          7974285,
+          8166913,
+          8231796,
+          8261530,
+          7262768,
+          7968526
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 18146235,
+          "last_half_mean_ns": 7978306.6,
+          "relative_change": -0.5603326750700628,
+          "last_half_cv": 0.05213807207764254,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 3,
+        "iterations": 400000,
+        "status": "OK",
+        "allocsPerSec": 1857927.9989359274,
+        "peak_rss_kb": 140896,
+        "chunkTimingsNs": [
+          61727580,
+          19109482,
+          22024811,
+          17752399,
+          14635590,
+          16081560,
+          15760501,
+          16010435,
+          15837642,
+          16353596
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 27049972.4,
+          "last_half_mean_ns": 16008746.8,
+          "relative_change": -0.4081788120419671,
+          "last_half_cv": 0.01448643609728725,
+          "reason": "exceeded drift or noise threshold"
+        }
+      }
+    ],
+    "final_iterations": 400000
+  },
+  "node-16": {
+    "final_status": "UNSTABLE_AFTER_MAX_EXTENSIONS",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 2856492.0666360185,
+        "peak_rss_kb": 56028,
+        "chunkTimingsNs": [
+          5417059,
+          1832040,
+          1346004,
+          5724304,
+          1185484,
+          207815,
+          307829,
+          394629,
+          702122,
+          386701
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 3100978.2,
+          "last_half_mean_ns": 399819.2,
+          "relative_change": -0.8710667491954635,
+          "last_half_cv": 0.4627324956288017,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 3917616.4438032615,
+        "peak_rss_kb": 56400,
+        "chunkTimingsNs": [
+          11157910,
+          3879820,
+          2047985,
+          1849340,
+          3083974,
+          1101621,
+          444724,
+          794372,
+          436309,
+          729670
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 4403805.8,
+          "last_half_mean_ns": 701339.2,
+          "relative_change": -0.8407424777904602,
+          "last_half_cv": 0.39422423652303246,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 7855740.3269323455,
+        "peak_rss_kb": 61484,
+        "chunkTimingsNs": [
+          10470496,
+          2728284,
+          1500755,
+          1164762,
+          1083788,
+          1109617,
+          1343479,
+          2192585,
+          1384831,
+          2480493
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 3389617,
+          "last_half_mean_ns": 1702201,
+          "relative_change": -0.49781907513444734,
+          "last_half_cv": 0.3508625733133791,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 3,
+        "iterations": 400000,
+        "status": "OK",
+        "allocsPerSec": 10800126.275076408,
+        "peak_rss_kb": 61272,
+        "chunkTimingsNs": [
+          13833882,
+          2820844,
+          2280428,
+          4376779,
+          3199060,
+          2126544,
+          2198331,
+          2023594,
+          2109939,
+          2067203
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 5302198.6,
+          "last_half_mean_ns": 2105122.2,
+          "relative_change": -0.6029718313455855,
+          "last_half_cv": 0.031199400999979778,
+          "reason": "exceeded drift or noise threshold"
+        }
+      }
+    ],
+    "final_iterations": 400000
+  },
+  "node-64": {
+    "final_status": "UNSTABLE_AFTER_MAX_EXTENSIONS",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 2291056.6632839977,
+        "peak_rss_kb": 57496,
+        "chunkTimingsNs": [
+          6604113,
+          5477592,
+          1996042,
+          1783807,
+          2246458,
+          467197,
+          899971,
+          1660245,
+          262999,
+          425567
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 3621602.4,
+          "last_half_mean_ns": 743195.8,
+          "relative_change": -0.7947881302486435,
+          "last_half_cv": 0.7591311070505925,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 4917182.114379458,
+        "peak_rss_kb": 57088,
+        "chunkTimingsNs": [
+          8166665,
+          3473003,
+          2219640,
+          1601731,
+          630600,
+          1320083,
+          494320,
+          861421,
+          1164077,
+          405311
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 3218327.8,
+          "last_half_mean_ns": 849042.4,
+          "relative_change": -0.7361852325919069,
+          "last_half_cv": 0.4725907117056062,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 6357618.18446642,
+        "peak_rss_kb": 63164,
+        "chunkTimingsNs": [
+          12820349,
+          3629319,
+          1988573,
+          1969792,
+          1251824,
+          1355786,
+          1657591,
+          2852339,
+          1404154,
+          2528595
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 4331971.4,
+          "last_half_mean_ns": 1959693,
+          "relative_change": -0.5476209745983088,
+          "last_half_cv": 0.35030348939319045,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 3,
+        "iterations": 400000,
+        "status": "OK",
+        "allocsPerSec": 8990429.193649754,
+        "peak_rss_kb": 63192,
+        "chunkTimingsNs": [
+          17678314,
+          3265742,
+          2792867,
+          4847128,
+          3514917,
+          2414990,
+          2796769,
+          2350953,
+          2363115,
+          2466963
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 6419793.6,
+          "last_half_mean_ns": 2478558,
+          "relative_change": -0.613919363388879,
+          "last_half_cv": 0.07413240305364462,
+          "reason": "exceeded drift or noise threshold"
+        }
+      }
+    ],
+    "final_iterations": 400000
+  },
+  "node-256": {
+    "final_status": "UNSTABLE_AFTER_MAX_EXTENSIONS",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 2747002.196502956,
+        "peak_rss_kb": 61656,
+        "chunkTimingsNs": [
+          5842020,
+          2193371,
+          3160061,
+          419391,
+          1324725,
+          784807,
+          1041323,
+          1527173,
+          1349463,
+          559326
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 2587913.6,
+          "last_half_mean_ns": 1052418.4,
+          "relative_change": -0.5933332550205695,
+          "last_half_cv": 0.3766486903375742,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 3706204.8429052806,
+        "peak_rss_kb": 61804,
+        "chunkTimingsNs": [
+          8826738,
+          3540755,
+          2572383,
+          3007462,
+          1502393,
+          1709145,
+          1493220,
+          1203809,
+          2407043,
+          718831
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 3889946.2,
+          "last_half_mean_ns": 1506409.6,
+          "relative_change": -0.6127428189109659,
+          "last_half_cv": 0.41512783857158847,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 4522290.346506478,
+        "peak_rss_kb": 70856,
+        "chunkTimingsNs": [
+          12301451,
+          4402978,
+          3405267,
+          3271861,
+          2954171,
+          3605145,
+          2908563,
+          5866141,
+          2853010,
+          2656791
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 5267145.6,
+          "last_half_mean_ns": 3577930,
+          "relative_change": -0.3207079751127441,
+          "last_half_cv": 0.37127934381568306,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 3,
+        "iterations": 400000,
+        "status": "OK",
+        "allocsPerSec": 6785853.625947937,
+        "peak_rss_kb": 70716,
+        "chunkTimingsNs": [
+          18935350,
+          5185818,
+          5874585,
+          6900953,
+          5016141,
+          3782202,
+          3432010,
+          3316184,
+          3192421,
+          3310494
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 8382569.4,
+          "last_half_mean_ns": 3406662.2,
+          "relative_change": -0.5936016706285784,
+          "last_half_cv": 0.06645456568140201,
+          "reason": "exceeded drift or noise threshold"
+        }
+      }
+    ],
+    "final_iterations": 400000
+  },
+  "node-1024": {
+    "final_status": "UNSTABLE_AFTER_MAX_EXTENSIONS",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 1445641.564161042,
+        "peak_rss_kb": 75168,
+        "chunkTimingsNs": [
+          8104737,
+          4442970,
+          7883226,
+          803749,
+          2741262,
+          3122563,
+          1981833,
+          2469885,
+          1605299,
+          1431196
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 4795188.8,
+          "last_half_mean_ns": 2122155.2,
+          "relative_change": -0.5574407414364998,
+          "last_half_cv": 0.32356550459074246,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 1977387.5451793508,
+        "peak_rss_kb": 87488,
+        "chunkTimingsNs": [
+          15929923,
+          6025745,
+          8853295,
+          2643021,
+          1470022,
+          2587892,
+          2459715,
+          2284777,
+          1771275,
+          6546111
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 6984401.2,
+          "last_half_mean_ns": 3129954,
+          "relative_change": -0.5518650904532804,
+          "last_half_cv": 0.6181500388989385,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 2401694.155056977,
+        "peak_rss_kb": 94452,
+        "chunkTimingsNs": [
+          17419872,
+          12066109,
+          4439572,
+          5625243,
+          10357965,
+          11752178,
+          5934050,
+          4986596,
+          5420663,
+          5272302
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 9981752.2,
+          "last_half_mean_ns": 6673157.8,
+          "relative_change": -0.3314642894060223,
+          "last_half_cv": 0.42858242308953365,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 3,
+        "iterations": 400000,
+        "status": "OK",
+        "allocsPerSec": 2997292.4183735554,
+        "peak_rss_kb": 97220,
+        "chunkTimingsNs": [
+          36887328,
+          9450708,
+          21400653,
+          9452473,
+          9434270,
+          8048217,
+          8329761,
+          8650994,
+          6866074,
+          14933301
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 17325086.4,
+          "last_half_mean_ns": 9365669.4,
+          "relative_change": -0.45941571754585875,
+          "last_half_cv": 0.34002631144869633,
+          "reason": "exceeded drift or noise threshold"
+        }
+      }
+    ],
+    "final_iterations": 400000
+  },
+  "node-4096": {
+    "final_status": "UNSTABLE_AFTER_MAX_EXTENSIONS",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 595460.7692105053,
+        "peak_rss_kb": 103252,
+        "chunkTimingsNs": [
+          18900557,
+          13223993,
+          13005033,
+          6439352,
+          3839821,
+          11923957,
+          5037161,
+          3250906,
+          3299813,
+          5047995
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 11081751.2,
+          "last_half_mean_ns": 5711966.4,
+          "relative_change": -0.4845610321949837,
+          "last_half_cv": 0.6273333083086297,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 591515.1306938189,
+        "peak_rss_kb": 111764,
+        "chunkTimingsNs": [
+          36950749,
+          19163583,
+          11190543,
+          13532991,
+          12207502,
+          8480947,
+          12198643,
+          15033274,
+          23983327,
+          16315824
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 18609073.6,
+          "last_half_mean_ns": 15202403,
+          "relative_change": -0.1830650290941942,
+          "last_half_cv": 0.37869196898367763,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 508038.3543047544,
+        "peak_rss_kb": 129240,
+        "chunkTimingsNs": [
+          139140881,
+          42749630,
+          32004920,
+          26871868,
+          25332538,
+          31239903,
+          26449544,
+          23474579,
+          24148715,
+          22258487
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 53219967.4,
+          "last_half_mean_ns": 25514245.6,
+          "relative_change": -0.520588853273142,
+          "last_half_cv": 0.13896232044662948,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 3,
+        "iterations": 400000,
+        "status": "OK",
+        "allocsPerSec": 589316.303879744,
+        "peak_rss_kb": 148004,
+        "chunkTimingsNs": [
+          69809689,
+          61109012,
+          113484720,
+          56330626,
+          133820598,
+          57583057,
+          46258335,
+          51209283,
+          47829178,
+          41318147
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 86910929,
+          "last_half_mean_ns": 48839600,
+          "relative_change": -0.4380499603220212,
+          "last_half_cv": 0.12383662887740288,
+          "reason": "exceeded drift or noise threshold"
+        }
+      }
+    ],
+    "final_iterations": 400000
+  },
+  "node-16384": {
+    "final_status": "UNSTABLE_AFTER_MAX_EXTENSIONS",
+    "attempts": [
+      {
+        "attempt": 0,
+        "iterations": 50000,
+        "status": "OK",
+        "allocsPerSec": 342010.60758211795,
+        "peak_rss_kb": 163132,
+        "chunkTimingsNs": [
+          22040286,
+          17928531,
+          17759807,
+          16315707,
+          14445224,
+          10225061,
+          12725350,
+          13141610,
+          9407345,
+          12205375
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 17697911,
+          "last_half_mean_ns": 11540948.2,
+          "relative_change": -0.34789206477532864,
+          "last_half_cv": 0.1416516513168378,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 1,
+        "iterations": 100000,
+        "status": "OK",
+        "allocsPerSec": 398489.4714638482,
+        "peak_rss_kb": 170596,
+        "chunkTimingsNs": [
+          47148949,
+          29491945,
+          31212705,
+          22656621,
+          24131284,
+          16520934,
+          19622298,
+          19108478,
+          20046057,
+          21008388
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 30928300.8,
+          "last_half_mean_ns": 19261231,
+          "relative_change": -0.3772295760910344,
+          "last_half_cv": 0.08738331478808192,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 2,
+        "iterations": 200000,
+        "status": "OK",
+        "allocsPerSec": 468991.11749348615,
+        "peak_rss_kb": 198092,
+        "chunkTimingsNs": [
+          79229307,
+          56208155,
+          48583002,
+          35767605,
+          31252136,
+          34378783,
+          36126127,
+          37010729,
+          32623215,
+          35268250
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 50208041,
+          "last_half_mean_ns": 35081420.8,
+          "relative_change": -0.3012788369894775,
+          "last_half_cv": 0.04809055250126393,
+          "reason": "exceeded drift or noise threshold"
+        }
+      },
+      {
+        "attempt": 3,
+        "iterations": 400000,
+        "status": "OK",
+        "allocsPerSec": 333251.9429336007,
+        "peak_rss_kb": 205504,
+        "chunkTimingsNs": [
+          269699536,
+          163879443,
+          107775061,
+          91887451,
+          98954737,
+          93412568,
+          104475608,
+          91358017,
+          80210925,
+          98639731
+        ],
+        "stability_check": {
+          "stable": false,
+          "first_half_mean_ns": 146439245.6,
+          "last_half_mean_ns": 93619369.8,
+          "relative_change": -0.36069480953403654,
+          "last_half_cv": 0.09672626030537523,
+          "reason": "exceeded drift or noise threshold"
+        }
+      }
+    ],
+    "final_iterations": 400000
+  }
+}

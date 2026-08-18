@@ -1,0 +1,43 @@
+{
+  "run_id": "deno-cold-run08",
+  "runtime": "deno",
+  "mode": "cold",
+  "timed_count_requested": 10,
+  "wall_clock_process_s": 0.24835824966430664,
+  "server_cpu_percent_during_run": 52.3,
+  "connection_verification": {
+    "client_connections_opened": 310,
+    "keepalive_requests_delta": 0,
+    "cold_requests_delta": 310
+  },
+  "status": "OK",
+  "timedCount": 10,
+  "errors": 0,
+  "warmupFinalStatus": "FIXED_NO_STABILITY_CHECK",
+  "warmupFinalIterations": 300,
+  "warmupAttempts": [
+    {
+      "attempt": 0,
+      "iterations": 300,
+      "attemptMeanPerRequestNs": 707167.9933333333
+    }
+  ],
+  "latenciesNs": [
+    590563,
+    463111,
+    510475,
+    611680,
+    637347,
+    607947,
+    638211,
+    529427,
+    567398,
+    455054
+  ],
+  "totalNs": 5716572,
+  "throughputPerSec": 1749.3001050279784,
+  "allStatus200": true,
+  "allBodyMatch": true,
+  "allContentLengthMatch": true,
+  "runtimeVersion": "deno 2.9.5"
+}
