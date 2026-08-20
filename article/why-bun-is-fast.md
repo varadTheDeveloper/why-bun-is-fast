@@ -14,6 +14,35 @@ What we found broke the obvious story almost immediately. It kept breaking it, a
 
 ---
 
+## The short answer
+
+Here's the short version, before the six-experiment walkthrough: **there is no single fastest JavaScript runtime.**
+
+Across six controlled experiments, performance depended on the workload and the specific implementation path a call took through it — not on which runtime's name was on the process. Bun won some paths outright. Node won others. Deno won others. And when a real external dependency — a database — became part of the request, the gap between all three got smaller.
+
+So this isn't building toward proving Bun is universally faster. It's about tracing where the actual performance differences come from, on which paths they show up — and where they start to disappear.
+
+*A quick methodology note, up front: all six experiments ran on the same shared 2-vCPU cloud VM, using release builds of Bun, Node, and Deno — not dedicated hardware. That keeps every comparison below internally consistent, but it means the absolute numbers here shouldn't be read as universal benchmarks. Different hardware, especially dedicated or bare-metal machines, can produce different absolute results. (Full methodology detail is in the note at the very top of this piece.)*
+
+### Who wins where?
+
+A quick look at how each of the six experiments actually landed:
+
+| Test / workload | Winner | What it tells us |
+|---|---|---|
+| Native call via Bun's own binding (`bun:ffi`) | Bun | Bun's own binding path is genuinely fast |
+| Native call via Deno's V8 Fast API | Deno | A well-built fast-call path can beat Bun's, too — dramatically |
+| Same compiled N-API addon, loaded via Bun's compatibility layer vs. Node's native implementation | Node | Bun's N-API compatibility layer adds substantial overhead — same code, slower door |
+| `fetch()` request, cold and keep-alive | Bun | An extra architectural cost (a dedicated thread hop) didn't stop Bun from winning here |
+| Buffer allocation below 4,096 bytes | Node | Node's pool wins at small sizes |
+| Buffer allocation at/above 4,096 bytes | Bun | The winner flips exactly at the measured pooling threshold |
+| Plaintext HTTP (no I/O) | Deno | Raw HTTP throughput has no universal winner |
+| Database-backed HTTP | Bun (spread narrows to ~1.13×, from ~1.22× on plaintext) | Adding real I/O shrinks — but doesn't erase — the gap between runtimes |
+
+*Each row is one experiment's result under its specific tested conditions, not a general claim about the runtime. The full numbers, methodology, and caveats for every row are in the matching section below.*
+
+---
+
 ## 1. The obvious answers are wrong
 
 Start with the language. Bun wasn't just *inspired by* a Rust rewrite — in May 2026, [Bun's team replaced roughly 535,000 lines of Zig with Rust](https://bun.com/blog/bun-in-rust), across 1,448 files, in about eleven days. If implementation language were the main driver of Bun's speed, swapping the entire language of a production runtime should have moved performance dramatically. Bun's own reported numbers for the rewrite: `Bun.serve` throughput up about 4.8%. Barely a shrug.
@@ -110,7 +139,7 @@ Using its own preferred mechanism, Bun beats Node — consistent with the popula
 
 We want to be careful about what this does and doesn't show. It does not prove JavaScriptCore's garbage collector is what caused this — we didn't instrument the collector itself, and this experiment can't separate "engine design" from "how well this particular compatibility layer was built." It's entirely possible Bun's Node-compatibility layer is simply a less-optimized piece of code than its `bun:ffi` path, independent of anything about JSC versus V8 at all — we can't rule that out with this data, and we're not going to pretend we can.
 
-What it does show, cleanly, is that **binding-path implementation materially affects the observed cost — dramatically in this benchmark.** Bun's real advantage, where it has one, isn't "JSC is faster." It's that Bun built a fast door for itself — and, on this same engine, a much slower one for code that expects Node's door. If you'd only run the first comparison — each runtime using its own preferred mechanism — you'd have walked away with exactly the wrong lesson.
+What it does show, cleanly, is that **binding-path implementation materially affects the observed cost — dramatically in this benchmark.** Bun's real advantage, where it has one, isn't "JSC is faster." It's that Bun built a fast door for itself — and a much slower one for code that expects Node's door. If you'd only run the first comparison — each runtime using its own preferred mechanism — you'd have walked away with exactly the wrong lesson.
 
 ---
 
@@ -211,7 +240,7 @@ We're not going to claim "the header-and-URL copy costs Bun 10.5% throughput." W
 
 ## 9. The big real-world test
 
-Everything so far has isolated one narrow mechanism at a time. This test asks the bigger question: does any of it survive contact with a realistic application?
+Everything so far has isolated one narrow mechanism at a time — a single native call, a single buffer allocation, a single `fetch()`. That's useful for finding where overhead actually lives, but real applications don't run in isolation like that. They also spend time waiting on databases, networks, filesystems, and other systems outside the runtime's control. So we tested what happens once a database becomes part of the request path — and whether anything from sections 4 through 8 survives contact with a workload that isn't just measuring the runtime anymore.
 
 We built two versions of the same server in Bun, Node, and Deno. Workload A: a plain "hello world" HTTP response, no I/O — the kind of benchmark most public runtime comparisons actually run. Workload B: the same server, except it now does a single indexed lookup against a real PostgreSQL database before responding — a deliberately light database call, deliberately using the same generic driver package on all three runtimes rather than each runtime's own fastest, most specialized client, to keep the database-client implementation as constant as possible across the three runtimes.
 
@@ -225,6 +254,8 @@ We built two versions of the same server in Bun, Node, and Deno. Workload A: a p
 | Deno | **58,012 req/s** | 8,053 req/s |
 
 *([H6](../experiments/h6-realistic-io-convergence/) — realistic I/O convergence experiment; concurrency 20, 10-second timed runs.)*
+
+The interesting result here isn't simply which runtime won. It's that the ranking changed when the workload changed, and the gap between the runtimes got smaller in the process.
 
 On plaintext, Deno was fastest, Bun second, Node third. Add one database call, and the order fully inverts: Bun fastest, Node second, Deno last. **No runtime won both workloads.** The overall spread between fastest and slowest also narrowed — from a 1.224x gap on plaintext to a 1.130x gap with the database call added, roughly an 8% reduction.
 
@@ -275,6 +306,6 @@ Not because of one magic engine. Not because it started life in Zig, and not bec
 
 Bun is fast, where it's fast, because of a long list of specific, low-level choices: which door a native call walks through, how long a request object needs to stay alive, whether memory gets pooled or allocated fresh, which code sits where in the compiled binary, whether a network call gets handed to its own thread. Each of those is a real, traceable decision, and each one shows up in our numbers.
 
-And every one of them, measured honestly, stopped winning somewhere. Change the size of the buffer, the concurrency of the server, the state of the connection, or which binding path a call takes, and the winner changes with it.
+And every one of them, measured honestly, stopped winning somewhere. Change the size of the buffer, the concurrency of the server, the state of the connection, or which binding path a call takes, and the winner changes with it. Its binding choices matter. Its allocation strategy matters. Its HTTP request lifecycle matters. But every one of those advantages is conditional — that's the pattern this whole piece has been tracing, one experiment at a time.
 
-That's not a hole in the explanation. Once you've actually followed the code and measured what it does, it's the clearest explanation we've found that survives contact with the evidence.
+That's not a hole in the explanation — it's the explanation. The most accurate answer was never going to be "Bun is the fastest JavaScript runtime." It's narrower than that, and more useful: Bun can be extremely fast on the paths it has optimized — but runtime performance, on this evidence, is a property of the workload and the implementation path, not a single universal number. Once you've actually followed the code and measured what it does, that's the clearest explanation we've found that survives contact with the evidence.
